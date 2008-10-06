@@ -5,7 +5,7 @@
     <sim>
 
         <description>Douglas DC-6</description>
-        <author>Syd Adams</author>
+        <author>Syd Adams.Ron Jensen</author>
         <flight-model>jsb</flight-model>
         <aero>DC-6B-jsb</aero>
         <fuel-fraction>0.8</fuel-fraction>
