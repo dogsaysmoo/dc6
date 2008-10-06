@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>asi300gauge.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>ASI.face</object-name>
+        <object-name>ASI.needle</object-name>
+        <emission>
+            <red>0.8</red>
+            <green>0.5</green>
+            <blue>0.3</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>ASI.needle</object-name>
+        <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>50.0</ind><dep>25.0</dep></entry>
+            <entry><ind>150.0</ind><dep>135.0</dep></entry>
+            <entry><ind>250.0</ind><dep>180.0</dep></entry>
+            <entry><ind>350.0</ind><dep>270.0</dep></entry>
+            <entry><ind>450.0</ind><dep>343.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+</PropertyList>
