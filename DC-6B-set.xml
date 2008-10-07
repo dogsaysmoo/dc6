@@ -19,6 +19,10 @@
 
         <model>
             <path>Aircraft/dc6/Models/DC-6B.xml</path>
+            <livery>
+                <file type="string">PanAm</file>
+            </livery>
+
             <autostart type="bool">0</autostart>
         </model>
 
@@ -79,6 +83,20 @@
         <gear>
             <brake-parking>1</brake-parking>
         </gear>
+        <engines>
+            <engine n="0">
+                <selected type="bool">1</selected>
+            </engine>
+            <engine n="1">
+                <selected type="bool">1</selected>
+            </engine>
+            <engine n="2">
+                <selected type="bool">1</selected>
+            </engine>
+            <engine n="3">
+                <selected type="bool">1</selected>
+            </engine>
+        </engines>
     </controls>
 
     <consumables>

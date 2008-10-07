@@ -9,9 +9,10 @@
 
     <animation>
         <type>material</type>
-        <object-name>Clock.001</object-name>
+        <object-name>Clock.face</object-name>
         <object-name>Hourhand</object-name>
         <object-name>Minutehand</object-name>
+		<object-name>Sec.Hand</object-name>
         <emission>
             <red>0.8</red>
             <green>0.4</green>
@@ -53,6 +54,24 @@
             <z-m>0</z-m>
         </center>
     </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Sec.Hand</object-name>
+        <property>/instrumentation/clock/indicated-sec</property>
+        <factor>6.0</factor>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+    </animation>
+
 
 <!-- Hotspots -->
 
