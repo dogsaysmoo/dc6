@@ -323,6 +323,66 @@
     </model>
 
     <model>
+        <path>Aircraft/dc6/Models/Instruments/FuelPsi1.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>0.140</y-m>
+            <z-m>1.043</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/FuelPsi2.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>0.234</y-m>
+            <z-m>1.043</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/OilPsi1.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>0.140</y-m>
+            <z-m>0.949</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/OilPsi2.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>0.234</y-m>
+            <z-m>0.949</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/OilTemp1.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>0.140</y-m>
+            <z-m>0.861</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/OilTemp2.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>0.234</y-m>
+            <z-m>0.861</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
         <path>Aircraft/dc6/Models/Instruments/magcompass.xml</path>
         <offsets>
             <x-m>-10.148</x-m>

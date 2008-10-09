@@ -80,7 +80,7 @@ L.E.MAC 163.6 in (4.15544 m)
 -->
 
  <metrics>
-   <wingarea  unit="M2"> 445.91 </wingarea>
+   <wingarea  unit="M2">135.9</wingarea>
    <wingspan  unit="M"> 35.81</wingspan>
    <wing_incidence>2.00</wing_incidence>
    <chord     unit="M"> 3.795</chord>

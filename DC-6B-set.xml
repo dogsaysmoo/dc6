@@ -108,6 +108,15 @@
         </default>
     </menubar>
 
+    <flaps>
+        <setting>0.0</setting>
+        <setting>0.2</setting>
+        <setting>0.4</setting>
+        <setting>0.6</setting>
+        <setting>0.8</setting>
+        <setting>1.0</setting>
+    </flaps>
+
     </sim>
 
     <controls>
