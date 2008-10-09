@@ -79,6 +79,29 @@ setprop("fdm/jsbsim/propulsion/set-running",0);
 }
 
 var update = func {
+		updateBMEP();
     settimer(update,0);
 }
 
+var updateBMEP = func {
+	var hp=0;
+	var rpm=0;
+	var bmep=0;
+	for(var engine=0; engine< 4; engine+=1)
+	{
+		rpm=getprop("engines/engine["~engine~"]/rpm");
+		hp=getprop("fdm/jsbsim/propulsion/engine["~engine~"]/power_hp");
+#print("Engine: ", engine);
+#print("Horsepower: ", hp);
+#print("RPM: ", rpm);
+
+		if(rpm)
+		{
+			bmep=hp*285/rpm;
+		} else {
+			bmep=0;
+		}
+#		print("BMEP: ", bmep);
+		setprop("engines/engine["~engine~"]/bmep", bmep);
+	}
+}

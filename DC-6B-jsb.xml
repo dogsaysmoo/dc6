@@ -80,7 +80,7 @@ L.E.MAC 163.6 in (4.15544 m)
 -->
 
  <metrics>
-   <wingarea  unit="M2">135.9</wingarea>
+   <wingarea  unit="M2"> 135.90 </wingarea>
    <wingspan  unit="M"> 35.81</wingspan>
    <wing_incidence>2.00</wing_incidence>
    <chord     unit="M"> 3.795</chord>
@@ -235,7 +235,7 @@ L.E.MAC 163.6 in (4.15544 m)
       <yaw>   0.00 </yaw>
     </orient>
     <feed>0</feed>
-    <thruster file="HamiltonStd43E60">
+    <thruster file="prop_RAF-6-mod">
      <location unit="M">
        <x>-0.396</x>
       <y>-8.070</y>
@@ -261,7 +261,7 @@ L.E.MAC 163.6 in (4.15544 m)
       <yaw>   0.00 </yaw>
     </orient>
     <feed>1</feed>
-    <thruster file="HamiltonStd43E60">
+    <thruster file="prop_RAF-6-mod">
      <location unit="M">
        <x>-0.396</x>
       <y>-3.851</y>
@@ -287,7 +287,7 @@ L.E.MAC 163.6 in (4.15544 m)
       <yaw>   0.00 </yaw>
     </orient>
     <feed>1</feed>
-    <thruster file="HamiltonStd43E60">
+    <thruster file="prop_RAF-6-mod">
      <location unit="M">
        <x>-0.396</x>
       <y>3.851</y>
@@ -313,7 +313,7 @@ L.E.MAC 163.6 in (4.15544 m)
       <yaw>   0.00 </yaw>
     </orient>
     <feed>0</feed>
-    <thruster file="HamiltonStd43E60">
+    <thruster file="prop_RAF-6-mod">
      <location unit="M">
        <x>-0.396</x>
       <y>8.070</y>
