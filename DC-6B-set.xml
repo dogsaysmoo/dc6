@@ -42,7 +42,7 @@
                 <x-offset-m archive="y">-0.57</x-offset-m>
                 <y-offset-m archive="y">1.35</y-offset-m>
                 <z-offset-m archive="y">-9.05</z-offset-m>
-                <pitch-offset-deg>-10</pitch-offset-deg>
+                <pitch-offset-deg>-15</pitch-offset-deg>
                 <limits>
                     <enabled type="bool">true</enabled>
                     <left>
@@ -63,7 +63,7 @@
     <name>Engineer View</name>
     <enabled type="bool">true</enabled>
     <type>lookfrom</type>
-    <internal type="bool">false</internal>
+    <internal type="bool">true</internal>
     <config>
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>

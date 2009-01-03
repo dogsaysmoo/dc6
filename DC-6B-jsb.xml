@@ -20,7 +20,6 @@ Wingspan : 35.81 m
 Height : 8.66
 Empty Wgt: 55,357 lbs
 Max TO wgt: 107,000 lbs
-ten wing tanks: 4248 gal config (1)
 
 Powerplant : 4x PW R-2800 CB-17 2500 hp
 Displacement: 2804 cu
@@ -235,6 +234,9 @@ L.E.MAC 163.6 in (4.15544 m)
       <yaw>   0.00 </yaw>
     </orient>
     <feed>0</feed>
+    <feed>1</feed>
+    <feed>2</feed>
+    <feed>3</feed>
     <thruster file="prop_RAF-6-mod">
      <location unit="M">
        <x>-0.396</x>
@@ -260,7 +262,10 @@ L.E.MAC 163.6 in (4.15544 m)
       <roll>   0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
+    <feed>0</feed>
     <feed>1</feed>
+    <feed>2</feed>
+    <feed>3</feed>
     <thruster file="prop_RAF-6-mod">
      <location unit="M">
        <x>-0.396</x>
@@ -286,7 +291,10 @@ L.E.MAC 163.6 in (4.15544 m)
       <roll>   0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
-    <feed>1</feed>
+    <feed>4</feed>
+    <feed>5</feed>
+    <feed>6</feed>
+    <feed>7</feed>
     <thruster file="prop_RAF-6-mod">
      <location unit="M">
        <x>-0.396</x>
@@ -312,7 +320,10 @@ L.E.MAC 163.6 in (4.15544 m)
       <roll>   0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
-    <feed>0</feed>
+    <feed>4</feed>
+    <feed>5</feed>
+    <feed>6</feed>
+    <feed>7</feed>
     <thruster file="prop_RAF-6-mod">
      <location unit="M">
        <x>-0.396</x>
@@ -327,82 +338,87 @@ L.E.MAC 163.6 in (4.15544 m)
     </thruster>
   </engine>
 
-<!-- 8 tank 5512 gallon system-->
-  <tank type="FUEL" number="0">
+<!-- Eight Wing Tank Airplane - 5512 Gallon System: (usable)
+2 outer wing tanks (#1 and #4 main) 695 gal. ea.
+2 inboard inner wing tanks (#2 and #3 main) 713 gal. ea. (+451.0)
+2 outboard inner wing tanks (#1 and #4 alt.) 576 gal. ea. (+452.0)
+2 inner wing fuel cells (#2 and #3 alt.) 762 gal. ea. (+468.0)
+-->
+  <tank type="FUEL" number="0"><!-- #1 main-->
      <location unit="M">
        <x>-0.396</x>
-       <y>0.00</y>
-       <z>-0.65</z>
+       <y>-13.35</y>
+       <z>0.910</z>
      </location>
      <capacity unit="LBS"> 4170</capacity>
      <contents unit="LBS"> 2000</contents>
   </tank>
 
-  <tank type="FUEL" number="1">
+  <tank type="FUEL" number="1"><!-- #2 main-->
      <location unit="M">
        <x>-0.396</x>
-       <y>0.00</y>
-       <z>-0.65</z>
+       <y>-6.168</y>
+       <z>0.045</z>
      </location>
      <capacity unit="LBS">4314 </capacity>
      <contents unit="LBS">2000</contents>
   </tank>
 
-  <tank type="FUEL" number="2">
+  <tank type="FUEL" number="2"><!-- #1 alt-->
      <location unit="M">
        <x>-0.396</x>
-       <y>0.00</y>
-       <z>-0.65</z>
+       <y>-10.15</y>
+       <z>0.530</z>
      </location>
      <capacity unit="LBS">3480</capacity>
      <contents unit="LBS"> 2000</contents>
   </tank>
 
-  <tank type="FUEL" number="3">
+  <tank type="FUEL" number="3"><!-- #2 alt-->
      <location unit="M">
        <x>-0.396</x>
-       <y>0.00</y>
-       <z>-0.65</z>
+       <y>-2.265</y>
+       <z>-0.43</z>
      </location>
      <capacity unit="LBS"> 4572</capacity>
      <contents unit="LBS">2000</contents>
   </tank>
 
-  <tank type="FUEL" number="4">
+  <tank type="FUEL" number="4"><!-- #3 alt-->
      <location unit="M">
        <x>-0.396</x>
-       <y>0.00</y>
-       <z>-0.65</z>
+       <y>2.265</y>
+       <z>-0.43</z>
      </location>
      <capacity unit="LBS">4572</capacity>
      <contents unit="LBS">2000</contents>
   </tank>
 
-  <tank type="FUEL" number="5">
+  <tank type="FUEL" number="5"><!-- #4 alt-->
      <location unit="M">
        <x>-0.396</x>
-       <y>0.00</y>
-       <z>-0.65</z>
+       <y>10.15</y>
+       <z>0.530</z>
      </location>
      <capacity unit="LBS">3480</capacity>
      <contents unit="LBS">2000</contents>
   </tank>
 
-  <tank type="FUEL" number="6">
+  <tank type="FUEL" number="6"><!-- #3 main-->
      <location unit="M">
        <x>-0.396</x>
-       <y>0.00</y>
-       <z>-0.65</z>
+       <y>6.168</y>
+       <z>0.045</z>
      </location>
      <capacity unit="LBS">4314</capacity>
      <contents unit="LBS">2000</contents>
   </tank>
 
-  <tank type="FUEL" number="7">
+  <tank type="FUEL" number="7"><!-- #4 main-->
      <location unit="M">
        <x>-0.396</x>
-       <y>0.00</y>
-       <z>-0.65</z>
+       <y>13.35</y>
+       <z>0.910</z>
      </location>
      <capacity unit="LBS">4170</capacity>
      <contents unit="LBS">2000</contents>
@@ -616,10 +632,10 @@ L.E.MAC 163.6 in (4.15544 m)
           <table>
             <independentVar lookup="row">aero/alpha-rad</independentVar>
             <tableData>
-              -0.20 -0.740
-               0.00 0.240
-             0.24    1.400
-               0.60 0.704
+              -0.20 -0.540
+               0.00 0.50
+             0.24    1.600
+               0.60 0.604
             </tableData>
           </table>
       </product>
@@ -631,17 +647,7 @@ L.E.MAC 163.6 in (4.15544 m)
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>fcs/flap-pos-deg</property>
-           <value> 0.02000 </value>
-       </product>
-    </function>
-
-    <function name="aero/coefficient/dCLsb">
-       <description>Delta_Lift_due_to_speedbrake</description>
-       <product>
-           <property>aero/qbar-psf</property>
-           <property>metrics/Sw-sqft</property>
-           <property>fcs/speedbrake-pos-norm</property>
-           <value>0</value>
+           <value> 0.07000 </value>
        </product>
     </function>
 
@@ -651,7 +657,7 @@ L.E.MAC 163.6 in (4.15544 m)
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>fcs/elevator-pos-rad</property>
-           <value>0.2</value>
+           <value>0.22</value>
        </product>
     </function>
 
@@ -667,11 +673,11 @@ L.E.MAC 163.6 in (4.15544 m)
           <table>
             <independentVar lookup="row">aero/alpha-rad</independentVar>
             <tableData>
-             -1.57       1.500
-             -0.26    0.033
-              0.00    0.025
-              0.26    0.033
-              1.57       1.500
+             -1.57       1.400
+             -0.26    0.030
+              0.00    0.020
+              0.26    0.030
+              1.57       1.400
             </tableData>
           </table>
        </product>
@@ -683,7 +689,7 @@ L.E.MAC 163.6 in (4.15544 m)
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>aero/cl-squared</property>
-           <value>0.039</value>
+           <value>0.035</value>
          </product>
     </function>
 
@@ -799,7 +805,7 @@ L.E.MAC 163.6 in (4.15544 m)
            <property>metrics/bw-ft</property>
            <property>aero/bi2vel</property>
            <property>velocities/p-aero-rad_sec</property>
-           <value>-0.4</value>
+           <value>-0.35</value>
        </product>
     </function>
 
@@ -825,7 +831,7 @@ L.E.MAC 163.6 in (4.15544 m)
           <table>
             <independentVar lookup="row">velocities/mach</independentVar>
             <tableData>
-              0.0    0.150
+              0.0    0.130
               2.0    0.050
             </tableData>
           </table>
@@ -854,7 +860,7 @@ L.E.MAC 163.6 in (4.15544 m)
            <property>metrics/Sw-sqft</property>
            <property>metrics/cbarw-ft</property>
            <property>aero/alpha-rad</property>
-           <value>-0.4</value>
+           <value>-0.35</value>
        </product>
     </function>
 
@@ -883,7 +889,7 @@ L.E.MAC 163.6 in (4.15544 m)
            <property>metrics/cbarw-ft</property>
            <property>aero/ci2vel</property>
            <property>velocities/q-aero-rad_sec</property>
-           <value>-22</value>
+           <value>-20</value>
        </product>
     </function>
 
@@ -895,7 +901,7 @@ L.E.MAC 163.6 in (4.15544 m)
            <property>metrics/cbarw-ft</property>
            <property>aero/ci2vel</property>
            <property>aero/alphadot-rad_sec</property>
-           <value>-8</value>
+           <value>-6</value>
        </product>
     </function>
 

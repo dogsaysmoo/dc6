@@ -488,7 +488,7 @@
         </volume>
         <volume>
             <property>velocities/airspeed-kt</property>
-            <factor>0.01</factor>
+            <factor>0.02</factor>
         </volume>
         <volume>
             <internal>dt_stop</internal>
