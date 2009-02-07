@@ -59,8 +59,8 @@
             <property>sim/sound/view-volume</property>
         </volume>
         <pitch>
-            <property>engines/engine[0]/mp-osi</property>
-            <factor>0.033</factor>
+            <property>engines/engine[0]/bmep</property>
+            <factor>0.004</factor>
             <offset>0.5</offset>
         </pitch>
         <position>
@@ -86,29 +86,25 @@
             </and>
         </condition>
         <volume>
-            <property>engines/engine[0]/mp-osi</property>
-            <factor>0.05</factor>
-            <offset>0.2</offset>
-            <min>0.2</min>
-            <max>0.8</max>
+            <property>engines/engine[0]/bmep</property>
+            <factor>0.004</factor>
+            <offset>0.25</offset>
         </volume>
         <volume>
             <property>sim/sound/view-volume</property>
         </volume>
         <pitch>
-            <property>engines/engine[0]/mp-osi</property>
-            <offset>0.2</offset>
-            <factor>0.033</factor>
-            <min>0.2</min>
-            <max>1.2</max>
+            <property>engines/engine[0]/bmep</property>
+            <offset>0.4</offset>
+            <factor>0.0035</factor>
         </pitch>
         <position>
             <x>-3.10</x>
             <y>8.35</y>
             <z>-0.3</z>
         </position>
-        <reference-dist>50.0</reference-dist>
-        <max-dist>200.0</max-dist>
+        <reference-dist>150.0</reference-dist>
+        <max-dist>500.0</max-dist>
     </engine>
 
 <!-- Engine 2 -->
@@ -165,8 +161,8 @@
             <property>sim/sound/view-volume</property>
         </volume>
         <pitch>
-            <property>engines/engine[1]/rpm</property>
-            <factor>0.00037</factor>
+            <property>engines/engine[1]/bmep</property>
+            <factor>0.004</factor>
             <offset>0.5</offset>
         </pitch>
         <position>
@@ -186,21 +182,17 @@
             <property>engines/engine[1]/running</property>
         </condition>
         <volume>
-            <property>engines/engine[1]/mp-osi</property>
-            <factor>0.05</factor>
-            <offset>0.2</offset>
-            <min>0.2</min>
-            <max>0.8</max>
+            <property>engines/engine[1]/bmep</property>
+            <factor>0.004</factor>
+            <offset>0.25</offset>
         </volume>
         <volume>
             <property>sim/sound/view-volume</property>
         </volume>
         <pitch>
-            <property>engines/engine[1]/mp-osi</property>
-            <offset>0.2</offset>
-            <factor>0.033</factor>
-            <min>0.2</min>
-            <max>1.2</max>
+            <property>engines/engine[1]/bmep</property>
+            <offset>0.4</offset>
+            <factor>0.0035</factor>
         </pitch>
         <position>
             <x>-3.87</x>
@@ -265,8 +257,8 @@
             <property>sim/sound/view-volume</property>
         </volume>
         <pitch>
-            <property>engines/engine[2]/rpm</property>
-            <factor>0.00037</factor>
+            <property>engines/engine[2]/bmep</property>
+            <factor>0.004</factor>
             <offset>0.5</offset>
         </pitch>
         <position>
@@ -286,21 +278,17 @@
             <property>engines/engine[2]/running</property>
         </condition>
         <volume>
-            <property>engines/engine[2]/mp-osi</property>
-            <factor>0.05</factor>
-            <offset>0.2</offset>
-            <min>0.2</min>
-            <max>0.8</max>
+            <property>engines/engine[2]/bmep</property>
+            <factor>0.004</factor>
+            <offset>0.25</offset>
         </volume>
         <volume>
             <property>sim/sound/view-volume</property>
         </volume>
         <pitch>
-            <property>engines/engine[2]/mp-osi</property>
-            <offset>0.2</offset>
-            <factor>0.033</factor>
-            <min>0.2</min>
-            <max>1.2</max>
+            <property>engines/engine[2]/bmep</property>
+            <offset>0.4</offset>
+            <factor>0.0035</factor>
         </pitch>
         <position>
             <x>-3.87</x>
@@ -365,8 +353,8 @@
             <property>sim/sound/view-volume</property>
         </volume>
         <pitch>
-            <property>engines/engine[3]/rpm</property>
-            <factor>0.00037</factor>
+            <property>engines/engine[3]/bmep</property>
+            <factor>0.004</factor>
             <offset>0.5</offset>
         </pitch>
         <position>
@@ -386,21 +374,17 @@
             <property>engines/engine[3]/running</property>
         </condition>
         <volume>
-            <property>engines/engine[3]/mp-osi</property>
-            <factor>0.05</factor>
-            <offset>0.2</offset>
-            <min>0.2</min>
-            <max>0.8</max>
+            <property>engines/engine[3]/bmep</property>
+            <factor>0.004</factor>
+            <offset>0.25</offset>
         </volume>
         <volume>
             <property>sim/sound/view-volume</property>
         </volume>
         <pitch>
-            <property>engines/engine[3]/mp-osi</property>
-            <offset>0.2</offset>
-            <factor>0.033</factor>
-            <min>0.2</min>
-            <max>1.2</max>
+            <property>engines/engine[3]/bmep</property>
+            <offset>0.4</offset>
+            <factor>0.0035</factor>
         </pitch>
         <position>
             <x>-3.10</x>

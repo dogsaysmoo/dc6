@@ -1,45 +1,39 @@
-var run_tyresmoke0 = 0;
-var run_tyresmoke1 = 0;
-var run_tyresmoke2 = 0;
+var Vvolume = props.globals.getNode("sim/sound/view-volume",1);
+var FDM="";
+ var counter=0;
+TireSpeed = {
+    new : func(unit,diameter){
+    m = { parents : [TireSpeed] };
+            m.num=unit;
+            m.circumference = diameter*3.14;
+            m.tire = props.globals.initNode("gear/gear["~m.num~"]/tire-rpm", 0.0, "DOUBLE");
+            m.wow = props.globals.getNode("gear/gear["~m.num~"]/wow");
+            m.gspeed = props.globals.getNode("velocities/groundspeed-kt");
+            m.rpm = 0;
+        return m;
+    },
+    get_rotation: func {
+        var speed =me.gspeed.getValue() * 30.8666667;
+        var wow = me.wow.getBoolValue();
+        if(wow){
+            me.rpm = speed / me.circumference;
+        }else{
+            if(me.rpm > 0) me.rpm=me.rpm*0.95;
+        }
+        me.tire.setValue(me.rpm);
+    },
+};
 
-var tyresmoke_0 = aircraft.tyresmoke.new(0);
-var tyresmoke_1 = aircraft.tyresmoke.new(1);
-var tyresmoke_2 = aircraft.tyresmoke.new(2);
-
-
+var tire=[];
+append(tire,TireSpeed.new(0,1.055));
+append(tire,TireSpeed.new(1,1.151));
+append(tire,TireSpeed.new(2,1.151));
 
 setlistener("/sim/signals/fdm-initialized", func {
-    setprop("sim/sound/view-volume",0.1);
+    Vvolume.setDoubleValue(0.1);
+    FDM=getprop("sim/flight-model");
     update();
 });
-
-############ EFFECTS ############
-setlistener("gear/gear[0]/position-norm", func(g1) {
-    if(g1.getValue()){
-        run_tyresmoke0 = 1;
-    }else{
-        run_tyresmoke0 = 0;
-    }
-},1,0);
-
-setlistener("gear/gear[1]/position-norm", func(g2) {
-    if(g2.getValue()){
-        run_tyresmoke1 = 1;
-    }else{
-        run_tyresmoke1 = 0;
-    }
-},1,0);
-
-setlistener("gear/gear[2]/position-norm", func(g3) {
-    if(g3.getValue()){
-        run_tyresmoke2 = 1;
-    }else{
-        run_tyresmoke2 = 0;
-    }
-},1,0);
-
-
-
 
 setlistener("/sim/signals/reinit", func(rset) {
     if(rset.getValue()==0){
@@ -47,21 +41,18 @@ setlistener("/sim/signals/reinit", func(rset) {
 },1,0);
 
 setlistener("/sim/current-view/internal", func(vw){
-    var vlm=0.1;
     if(vw.getBoolValue()){
-    vlm=0.1;
+    Vvolume.setDoubleValue(0.1);
     }else{
-    vlm=0.8;
+    Vvolume.setDoubleValue(0.8);
     }
-    setprop("sim/sound/view-volume",vlm);
 },1,0);
 
 setlistener("/sim/model/autostart", func(idle){
-    var run= idle.getBoolValue();
-    if(run){
-    Startup();
+    if(idle.getBoolValue()){
+        Startup();
     }else{
-    Shutdown();
+        Shutdown();
     }
 },0,0);
 
@@ -95,11 +86,21 @@ setprop("controls/engines/engine[3]/fuel-pump",1);
 setprop("controls/engines/engine[3]/propeller-pitch",1);
 setprop("controls/engines/engine[3]/mixture",1);
 setprop("engines/engine[3]/rpm",1000);
-setprop("fdm/jsbsim/propulsion/set-running",1);
+if(FDM=="jsb"){
+    setprop("fdm/jsbsim/propulsion/set-running",-1);
+}else{
+    setprop("engines/engine[0]/running",1);
+    setprop("engines/engine[1]/running",1);
+    setprop("engines/engine[2]/running",1);
+    setprop("engines/engine[3]/running",1);
+    }
 }
 
 var Shutdown = func{
 setprop("controls/electric/engine[0]/generator",0);
+setprop("controls/electric/engine[1]/generator",0);
+setprop("controls/electric/engine[2]/generator",0);
+setprop("controls/electric/engine[3]/generator",0);
 setprop("controls/electric/battery-switch",0);
 setprop("controls/lighting/instrument-lights",0);
 setprop("controls/lighting/nav-lights",0);
@@ -112,11 +113,13 @@ setprop("controls/engines/engine[2]/magnetos",0);
 setprop("controls/engines/engine[2]/fuel-pump",0);
 setprop("controls/engines/engine[3]/magnetos",0);
 setprop("controls/engines/engine[3]/fuel-pump",0);
-setprop("fdm/jsbsim/propulsion/set-running",0);
 }
 
 var update = func {
         updateBMEP();
+        tire[counter].get_rotation();
+        counter+=1;
+        if(counter>2)counter=0;
     settimer(update,0);
 }
 
@@ -124,34 +127,17 @@ var updateBMEP = func {
     var hp=0;
     var rpm=0;
     var bmep=0;
+    var torque=0;
     for(var engine=0; engine< 4; engine+=1)
     {
-        rpm=getprop("engines/engine["~engine~"]/rpm");
-        hp=getprop("fdm/jsbsim/propulsion/engine["~engine~"]/power-hp");
-#print("Engine: ", engine);
-#print("Horsepower: ", hp);
-#print("RPM: ", rpm);
-
-        if(rpm)
-        {
+        if(FDM=="jsb"){
+            rpm=getprop("engines/engine["~engine~"]/rpm") or 1;
+            hp=getprop("fdm/jsbsim/propulsion/engine["~engine~"]/power-hp");
             bmep=hp*285/rpm;
-        } else {
-            bmep=0;
-        }
-#		print("BMEP: ", bmep);
+    }else{
+        torque=getprop("engines/engine["~engine~"]/torque-ftlb") or 0;
+    bmep = 150.8 * torque / 2804;
+    }
         setprop("engines/engine["~engine~"]/bmep", bmep);
     }
 }
-
-var tyresmoke = func {
-print ("run_tyresmoke ",run_tyresmoke0);
-    if (run_tyresmoke0)
-        tyresmoke_0.update();
-    if (run_tyresmoke1)
-        tyresmoke_1.update();
-    if (run_tyresmoke2)
-        tyresmoke_2.update();
-    settimer(tyresmoke, 0);
-}
-
-tyresmoke();

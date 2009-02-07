@@ -117,6 +117,21 @@
         <setting>1.0</setting>
     </flaps>
 
+    <weight n="0">
+        <name>Crew</name>
+        <weight-lb>500</weight-lb>
+        <max-lb>800</max-lb>
+        <min-lb>400</min-lb>
+    </weight>
+
+    <weight n="1">
+        <name>Pax/Baggage</name>
+        <weight-lb>15000</weight-lb>
+        <max-lb>30000</max-lb>
+        <min-lb>0</min-lb>
+    </weight>
+
+
     </sim>
 
     <controls>

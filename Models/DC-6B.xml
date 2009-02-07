@@ -212,12 +212,14 @@
         </offsets>
     </model>
 
+<!--  Center -->
+
     <model>
         <path>Aircraft/dc6/Models/Instruments/bmep1.xml</path>
         <offsets>
             <x-m>-9.750</x-m>
-            <y-m>-0.249</y-m>
-            <z-m>1.043</z-m>
+            <y-m>-0.262</y-m>
+            <z-m>1.055</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
@@ -226,8 +228,8 @@
         <path>Aircraft/dc6/Models/Instruments/bmep2.xml</path>
         <offsets>
             <x-m>-9.750</x-m>
-            <y-m>-0.154</y-m>
-            <z-m>1.043</z-m>
+            <y-m>-0.161</y-m>
+            <z-m>1.055</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
@@ -236,8 +238,8 @@
         <path>Aircraft/dc6/Models/Instruments/bmep3.xml</path>
         <offsets>
             <x-m>-9.750</x-m>
-            <y-m>-0.060</y-m>
-            <z-m>1.043</z-m>
+            <y-m>-0.058</y-m>
+            <z-m>1.055</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
@@ -246,78 +248,8 @@
         <path>Aircraft/dc6/Models/Instruments/bmep4.xml</path>
         <offsets>
             <x-m>-9.750</x-m>
-            <y-m>0.044</y-m>
-            <z-m>1.043</z-m>
-            <pitch-deg>0.0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <path>Aircraft/dc6/Models/Instruments/LHman.xml</path>
-        <offsets>
-            <x-m>-9.750</x-m>
-            <y-m>-0.249</y-m>
-            <z-m>0.949</z-m>
-            <pitch-deg>0.0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <path>Aircraft/dc6/Models/Instruments/RHman.xml</path>
-        <offsets>
-            <x-m>-9.750</x-m>
-            <y-m>-0.154</y-m>
-            <z-m>0.949</z-m>
-            <pitch-deg>0.0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <path>Aircraft/dc6/Models/Instruments/LHrpm.xml</path>
-        <offsets>
-            <x-m>-9.750</x-m>
-            <y-m>-0.249</y-m>
-            <z-m>0.861</z-m>
-            <pitch-deg>0.0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <path>Aircraft/dc6/Models/Instruments/RHrpm.xml</path>
-        <offsets>
-            <x-m>-9.750</x-m>
-            <y-m>-0.154</y-m>
-            <z-m>0.861</z-m>
-            <pitch-deg>0.0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <path>Aircraft/dc6/Models/Instruments/flaps.xml</path>
-        <offsets>
-            <x-m>-9.750</x-m>
-            <y-m>-0.060</y-m>
-            <z-m>0.861</z-m>
-            <pitch-deg>0.0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <path>Aircraft/dc6/Models/Instruments/LHFflow.xml</path>
-        <offsets>
-            <x-m>-9.750</x-m>
-            <y-m>-0.060</y-m>
-            <z-m>0.949</z-m>
-            <pitch-deg>0.0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <path>Aircraft/dc6/Models/Instruments/RHFflow.xml</path>
-        <offsets>
-            <x-m>-9.750</x-m>
-            <y-m>0.044</y-m>
-            <z-m>0.949</z-m>
+            <y-m>0.043</y-m>
+            <z-m>1.055</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
@@ -326,8 +258,8 @@
         <path>Aircraft/dc6/Models/Instruments/FuelPsi1.xml</path>
         <offsets>
             <x-m>-9.750</x-m>
-            <y-m>0.140</y-m>
-            <z-m>1.043</z-m>
+            <y-m>0.145</y-m>
+            <z-m>1.055</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
@@ -336,8 +268,48 @@
         <path>Aircraft/dc6/Models/Instruments/FuelPsi2.xml</path>
         <offsets>
             <x-m>-9.750</x-m>
-            <y-m>0.234</y-m>
-            <z-m>1.043</z-m>
+            <y-m>0.247</y-m>
+            <z-m>1.055</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/LHman.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>-0.262</y-m>
+            <z-m>0.959</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/RHman.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>-0.161</y-m>
+            <z-m>0.959</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/LHFflow.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>-0.058</y-m>
+            <z-m>0.959</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/RHFflow.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>0.043</y-m>
+            <z-m>0.959</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
@@ -346,8 +318,8 @@
         <path>Aircraft/dc6/Models/Instruments/OilPsi1.xml</path>
         <offsets>
             <x-m>-9.750</x-m>
-            <y-m>0.140</y-m>
-            <z-m>0.949</z-m>
+            <y-m>0.145</y-m>
+            <z-m>0.959</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
@@ -356,28 +328,38 @@
         <path>Aircraft/dc6/Models/Instruments/OilPsi2.xml</path>
         <offsets>
             <x-m>-9.750</x-m>
-            <y-m>0.234</y-m>
-            <z-m>0.949</z-m>
+            <y-m>0.247</y-m>
+            <z-m>0.959</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
 
     <model>
-        <path>Aircraft/dc6/Models/Instruments/OilTemp1.xml</path>
+        <path>Aircraft/dc6/Models/Instruments/LHrpm.xml</path>
         <offsets>
             <x-m>-9.750</x-m>
-            <y-m>0.140</y-m>
-            <z-m>0.861</z-m>
+            <y-m>-0.262</y-m>
+            <z-m>0.862</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
 
     <model>
-        <path>Aircraft/dc6/Models/Instruments/OilTemp2.xml</path>
+        <path>Aircraft/dc6/Models/Instruments/RHrpm.xml</path>
         <offsets>
             <x-m>-9.750</x-m>
-            <y-m>0.234</y-m>
-            <z-m>0.861</z-m>
+            <y-m>-0.161</y-m>
+            <z-m>0.862</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/flaps.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>-0.058</y-m>
+            <z-m>0.862</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
@@ -386,11 +368,92 @@
         <path>Aircraft/dc6/Models/Instruments/oat.xml</path>
         <offsets>
             <x-m>-9.750</x-m>
-            <y-m>0.044</y-m>
-            <z-m>0.861</z-m>
+            <y-m>0.043</y-m>
+            <z-m>0.862</z-m>
             <pitch-deg>0.0</pitch-deg>
         </offsets>
     </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/OilTemp1.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>0.145</y-m>
+            <z-m>0.862</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/OilTemp2.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>0.247</y-m>
+            <z-m>0.862</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/OilTemp2.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>-0.262</y-m>
+            <z-m>0.766</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/OilTemp2.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>-0.161</y-m>
+            <z-m>0.766</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/OilTemp2.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>-0.058</y-m>
+            <z-m>0.766</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/OilTemp2.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>0.043</y-m>
+            <z-m>0.766</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/OilTemp2.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>0.145</y-m>
+            <z-m>0.766</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/OilTemp2.xml</path>
+        <offsets>
+            <x-m>-9.750</x-m>
+            <y-m>0.247</y-m>
+            <z-m>0.766</z-m>
+            <pitch-deg>0.0</pitch-deg>
+        </offsets>
+    </model>
+<!-- -->
 
     <model>
         <path>Aircraft/dc6/Models/Instruments/magcompass.xml</path>
@@ -402,6 +465,87 @@
         </offsets>
     </model>
 
+<!-- OHead-->
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/fuelgauge1.xml</path>
+        <offsets>
+            <x-m>-9.599</x-m>
+            <y-m>-0.269</y-m>
+            <z-m>1.643</z-m>
+            <pitch-deg>55.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/fuelgauge2.xml</path>
+        <offsets>
+            <x-m>-9.599</x-m>
+            <y-m>-0.169</y-m>
+            <z-m>1.643</z-m>
+            <pitch-deg>55.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/fuelgauge3.xml</path>
+        <offsets>
+            <x-m>-9.599</x-m>
+            <y-m>-0.069</y-m>
+            <z-m>1.643</z-m>
+            <pitch-deg>55.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/fuelgauge4.xml</path>
+        <offsets>
+            <x-m>-9.599</x-m>
+            <y-m>0.031</y-m>
+            <z-m>1.643</z-m>
+            <pitch-deg>55.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/fuelgauge5.xml</path>
+        <offsets>
+            <x-m>-9.695</x-m>
+            <y-m>-0.269</y-m>
+            <z-m>1.576</z-m>
+            <pitch-deg>55.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/fuelgauge6.xml</path>
+        <offsets>
+            <x-m>-9.695</x-m>
+            <y-m>-0.169</y-m>
+            <z-m>1.576</z-m>
+            <pitch-deg>55.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/fuelgauge7.xml</path>
+        <offsets>
+            <x-m>-9.695</x-m>
+            <y-m>-0.069</y-m>
+            <z-m>1.576</z-m>
+            <pitch-deg>55.0</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <path>Aircraft/dc6/Models/Instruments/fuelgauge8.xml</path>
+        <offsets>
+            <x-m>-9.695</x-m>
+            <y-m>0.031</y-m>
+            <z-m>1.576</z-m>
+            <pitch-deg>55.0</pitch-deg>
+        </offsets>
+    </model>
 
 <!--Engines-->
 <!-- ENG 1-->
@@ -410,7 +554,7 @@
         <object-name>prop1</object-name>
         <condition>
             <less-than>
-                <property>fdm/jsbsim/propulsion/engine[0]/propeller-rpm</property>
+                <property>engines/engine[0]/rpm</property>
                 <value>300.000</value>
             </less-than>
         </condition>
@@ -419,7 +563,7 @@
     <animation>
         <type>spin</type>
         <object-name>prop1</object-name>
-        <property>fdm/jsbsim/propulsion/engine[0]/propeller-rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <center>
             <x-m>-4.460</x-m>
             <y-m>-8.080</y-m>
@@ -437,11 +581,11 @@
         <object-name>propblur1</object-name>
         <condition>
             <greater-than>
-                <property>fdm/jsbsim/propulsion/engine[0]/propeller-rpm</property>
+                <property>engines/engine[0]/rpm</property>
                 <value>299.999</value>
             </greater-than>
             <less-than>
-                <property>fdm/jsbsim/propulsion/engine[0]/propeller-rpm</property>
+                <property>engines/engine[0]/rpm</property>
                 <value>700</value>
             </less-than>
         </condition>
@@ -450,7 +594,7 @@
     <animation>
         <type>spin</type>
         <object-name>propblur1</object-name>
-        <property>fdm/jsbsim/propulsion/engine[0]/propeller-rpm</property>
+        <property>engines/engine[0]/rpm</property>
         <center>
            <x-m>-4.460</x-m>
             <y-m>-8.080</y-m>
@@ -468,7 +612,7 @@
         <object-name>Pdisc1</object-name>
         <condition>
             <greater-than>
-                <property>fdm/jsbsim/propulsion/engine[0]/propeller-rpm</property>
+                <property>engines/engine[0]/rpm</property>
                 <value>699.999</value>
             </greater-than>
         </condition>
@@ -480,7 +624,7 @@
         <object-name>prop2</object-name>
         <condition>
             <less-than>
-                <property>fdm/jsbsim/propulsion/engine[1]/propeller-rpm</property>
+                <property>engines/engine[1]/rpm</property>
                 <value>300</value>
             </less-than>
         </condition>
@@ -489,7 +633,7 @@
     <animation>
         <type>spin</type>
         <object-name>prop2</object-name>
-        <property>fdm/jsbsim/propulsion/engine[1]/propeller-rpm</property>
+        <property>engines/engine[1]/rpm</property>
         <center>
             <x-m>-5.325</x-m>
             <y-m>-3.855</y-m>
@@ -507,11 +651,11 @@
         <object-name>propblur2</object-name>
         <condition>
             <greater-than>
-                <property>fdm/jsbsim/propulsion/engine[1]/propeller-rpm</property>
+                <property>engines/engine[1]/rpm</property>
                 <value>299.999</value>
             </greater-than>
             <less-than>
-                <property>fdm/jsbsim/propulsion/engine[1]/propeller-rpm</property>
+                <property>engines/engine[1]/rpm</property>
                 <value>700</value>
             </less-than>
         </condition>
@@ -520,7 +664,7 @@
     <animation>
         <type>spin</type>
         <object-name>propblur2</object-name>
-        <property>fdm/jsbsim/propulsion/engine[1]/propeller-rpm</property>
+        <property>engines/engine[1]/rpm</property>
         <center>
             <x-m>-5.325</x-m>
             <y-m>-3.855</y-m>
@@ -538,7 +682,7 @@
         <object-name>Pdisc2</object-name>
         <condition>
             <greater-than>
-                <property>fdm/jsbsim/propulsion/engine[1]/propeller-rpm</property>
+                <property>engines/engine[1]/rpm</property>
                 <value>699.999</value>
             </greater-than>
         </condition>
@@ -550,7 +694,7 @@
         <object-name>prop3</object-name>
         <condition>
             <less-than>
-                <property>fdm/jsbsim/propulsion/engine[2]/propeller-rpm</property>
+                <property>engines/engine[2]/rpm</property>
                 <value>300</value>
             </less-than>
         </condition>
@@ -559,7 +703,7 @@
     <animation>
         <type>spin</type>
         <object-name>prop3</object-name>
-        <property>fdm/jsbsim/propulsion/engine[2]/propeller-rpm</property>
+        <property>engines/engine[2]/rpm</property>
         <center>
             <x-m>-5.325</x-m>
             <y-m>3.855</y-m>
@@ -577,11 +721,11 @@
         <object-name>propblur3</object-name>
         <condition>
             <greater-than>
-                <property>fdm/jsbsim/propulsion/engine[2]/propeller-rpm</property>
+                <property>engines/engine[2]/rpm</property>
                 <value>299.999</value>
             </greater-than>
             <less-than>
-                <property>fdm/jsbsim/propulsion/engine[2]/propeller-rpm</property>
+                <property>engines/engine[2]/rpm</property>
                 <value>700</value>
             </less-than>
         </condition>
@@ -590,7 +734,7 @@
     <animation>
         <type>spin</type>
         <object-name>propblur3</object-name>
-        <property>fdm/jsbsim/propulsion/engine[2]/propeller-rpm</property>
+        <property>engines/engine[2]/rpm</property>
         <center>
             <x-m>-5.325</x-m>
             <y-m>3.855</y-m>
@@ -608,7 +752,7 @@
         <object-name>Pdisc3</object-name>
         <condition>
             <greater-than>
-                <property>fdm/jsbsim/propulsion/engine[2]/propeller-rpm</property>
+                <property>engines/engine[2]/rpm</property>
                 <value>699.999</value>
             </greater-than>
         </condition>
@@ -620,7 +764,7 @@
         <object-name>prop4</object-name>
         <condition>
             <less-than>
-                <property>fdm/jsbsim/propulsion/engine[3]/propeller-rpm</property>
+                <property>engines/engine[3]/rpm</property>
                 <value>300</value>
             </less-than>
         </condition>
@@ -629,7 +773,7 @@
     <animation>
         <type>spin</type>
         <object-name>prop4</object-name>
-        <property>fdm/jsbsim/propulsion/engine[3]/propeller-rpm</property>
+        <property>engines/engine[3]/rpm</property>
         <center>
             <x-m>-4.460</x-m>
             <y-m>8.080</y-m>
@@ -647,11 +791,11 @@
         <object-name>propblur4</object-name>
         <condition>
             <greater-than>
-                <property>fdm/jsbsim/propulsion/engine[3]/propeller-rpm</property>
+                <property>engines/engine[3]/rpm</property>
                 <value>299.999</value>
             </greater-than>
             <less-than>
-                <property>fdm/jsbsim/propulsion/engine[3]/propeller-rpm</property>
+                <property>engines/engine[3]/rpm</property>
                 <value>700</value>
             </less-than>
         </condition>
@@ -660,7 +804,7 @@
     <animation>
         <type>spin</type>
         <object-name>propblur4</object-name>
-        <property>fdm/jsbsim/propulsion/engine[3]/propeller-rpm</property>
+        <property>engines/engine[3]/rpm</property>
         <center>
             <x-m>-4.460</x-m>
             <y-m>8.080</y-m>
@@ -678,16 +822,22 @@
         <object-name>Pdisc4</object-name>
         <condition>
             <greater-than>
-                <property>fdm/jsbsim/propulsion/engine[3]/propeller-rpm</property>
+                <property>engines/engine[3]/rpm</property>
                 <value>699.999</value>
             </greater-than>
         </condition>
     </animation>
 
 <!--Control Surfaces-->
-
+<!--JSBSIM-->
     <animation>
         <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>jsb</value>
+            </equals>
+        </condition>
         <object-name>Rudder</object-name>
         <property>fdm/jsbsim/fcs/rudder-pos-deg</property>
            <center>
@@ -704,6 +854,12 @@
 
     <animation>
         <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>jsb</value>
+            </equals>
+        </condition>
         <object-name>Elevator</object-name>
         <property>fdm/jsbsim/fcs/elevator-pos-deg</property>
         <center>
@@ -720,6 +876,12 @@
 
     <animation>
         <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>jsb</value>
+            </equals>
+        </condition>
         <object-name>LHflap</object-name>
         <property>fdm/jsbsim/fcs/flap-pos-deg</property>
            <center>
@@ -736,6 +898,12 @@
 
     <animation>
         <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>jsb</value>
+            </equals>
+        </condition>
         <object-name>RHflap</object-name>
         <property>fdm/jsbsim/fcs/flap-pos-deg</property>
         <center>
@@ -752,6 +920,12 @@
 
     <animation>
         <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>jsb</value>
+            </equals>
+        </condition>
         <object-name>LHaileron</object-name>
         <property>fdm/jsbsim/fcs/left-aileron-pos-deg</property>
         <center>
@@ -768,6 +942,12 @@
 
     <animation>
         <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>jsb</value>
+            </equals>
+        </condition>
         <object-name>RHaileron</object-name>
         <property>fdm/jsbsim/fcs/right-aileron-pos-deg</property>
     <center>
@@ -781,6 +961,146 @@
             <z>-0.116</z>
         </axis>
     </animation>
+
+<!--YASIM-->
+    <animation>
+        <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>yasim</value>
+            </equals>
+        </condition>
+        <object-name>Rudder</object-name>
+        <property>surface-positions/rudder-pos-norm</property>
+        <factor>15</factor>
+           <center>
+            <x-m>16.939</x-m>
+            <y-m>0</y-m>
+            <z-m>1.716</z-m>
+        </center>
+        <axis>
+            <x>-0.051</x>
+            <y>0</y>
+            <z>-0.999</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>yasim</value>
+            </equals>
+        </condition>
+        <object-name>Elevator</object-name>
+        <property>surface-positions/elevator-pos-norm</property>
+        <factor>12</factor>
+        <center>
+            <x-m>17.032</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.617</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>yasim</value>
+            </equals>
+        </condition>
+        <object-name>LHflap</object-name>
+        <property>surface-positions/flap-pos-norm</property>
+        <factor>50</factor>
+           <center>
+            <x-m>2.251</x-m>
+            <y-m>-2.254</y-m>
+            <z-m>-0.509</z-m>
+        </center>
+        <axis>
+            <x>0.090</x>
+            <y>0.989</y>
+            <z>-0.121</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>yasim</value>
+            </equals>
+        </condition>
+        <object-name>RHflap</object-name>
+        <property>surface-positions/flap-pos-norm</property>
+        <factor>50</factor>
+        <center>
+            <x-m>2.251</x-m>
+            <y-m>2.254</y-m>
+            <z-m>-0.509</z-m>
+        </center>
+        <axis>
+            <x>-0.090</x>
+            <y>0.989</y>
+            <z>0.121</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>yasim</value>
+            </equals>
+        </condition>
+        <object-name>LHaileron</object-name>
+        <property>surface-positions/left-aileron-pos-norm</property>
+        <factor>15</factor>
+        <center>
+            <x-m>1.128</x-m>
+            <y-m>-10.642</y-m>
+            <z-m>0.533</z-m>
+        </center>
+        <axis>
+            <x>0.075</x>
+            <y>0.990</y>
+            <z>-0.116</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>yasim</value>
+            </equals>
+        </condition>
+        <object-name>RHaileron</object-name>
+        <property>surface-positions/right-aileron-pos-norm</property>
+        <factor>-15</factor>
+    <center>
+            <x-m>1.128</x-m>
+            <y-m>10.642</y-m>
+            <z-m>0.533</z-m>
+        </center>
+        <axis>
+            <x>0.075</x>
+            <y>-0.990</y>
+            <z>-0.116</z>
+        </axis>
+    </animation>
+<!--            -->
 
     <animation>
         <type>rotate</type>
@@ -871,6 +1191,58 @@
     </animation>
 
 <!--   GEAR -->
+
+        <animation>
+        <type>select</type>
+        <object-name>unsafe.on</object-name>
+        <condition>
+            <and>
+                <less-than>
+                    <property>gear/gear[0]/position-norm</property>
+                    <value>1.0</value>
+                </less-than>
+                <greater-than>
+                    <property>gear/gear[0]/position-norm</property>
+                    <value>0.0</value>
+                </greater-than>
+            </and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>left.on</object-name>
+        <condition>
+            <equals>
+                <property>gear/gear[1]/position-norm</property>
+                <value>1.0</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>nose.on</object-name>
+        <condition>
+            <equals>
+                <property>gear/gear[0]/position-norm</property>
+                <value>1.0</value>
+            </equals>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>right.on</object-name>
+        <condition>
+            <equals>
+                <property>gear/gear[2]/position-norm</property>
+                <value>1.0</value>
+            </equals>
+        </condition>
+    </animation>
+
+
 <!-- FRONT-->
     <animation>
         <type>rotate</type>
@@ -992,13 +1364,9 @@
     </animation>
 
     <animation>
-        <condition>
-            <property>fdm/jsbsim/gear/unit[0]/WOW</property>
-        </condition>
         <type>spin</type>
         <object-name>FrtWheel</object-name>
-        <property>fdm/jsbsim/gear/unit[0]/wheel-speed-fps</property>
-        <factor>3.5</factor>
+        <property>gear/gear[0]/tire-rpm</property>
         <center>
             <x-m>-9.383</x-m>
             <y-m>0</y-m>
@@ -1079,13 +1447,9 @@
     </animation>
 
     <animation>
-        <condition>
-            <property>fdm/jsbsim/gear/unit[1]/WOW</property>
-        </condition>
         <type>spin</type>
         <object-name>LHWheel</object-name>
-        <property>fdm/jsbsim/gear/unit[1]/wheel-speed-fps</property>
-        <factor>3.5</factor>
+        <property>gear/gear[1]/tire-rpm</property>
         <center>
             <x-m>0.253</x-m>
             <y-m>-3.855</y-m>
@@ -1166,13 +1530,9 @@
     </animation>
 
     <animation>
-        <condition>
-            <property>fdm/jsbsim/gear/unit[2]/WOW</property>
-        </condition>
         <type>spin</type>
         <object-name>RHWheel</object-name>
-        <property>fdm/jsbsim/gear/unit[2]/wheel-speed-fps</property>
-        <factor>3.5</factor>
+        <property>gear/gear[2]/tire-rpm</property>
         <center>
             <x-m>0.253</x-m>
             <y-m>3.855</y-m>
@@ -1232,79 +1592,6 @@
 
     <animation>
         <type>pick</type>
-        <object-name>Rudder.trim</object-name>
-        <action>
-            <button>0</button>
-            <repeatable>true</repeatable>
-            <interval-sec>0.1</interval-sec>
-            <binding>
-            <command>property-adjust</command>
-            <property>controls/flight/rudder-trim</property>
-            <step>-0.01</step>
-            <min>-1</min>
-            <max>1</max>
-            <wrap>0</wrap>
-            </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>Rudder.trim</object-name>
-        <action>
-            <button>1</button>
-            <repeatable>true</repeatable>
-            <interval-sec>0.1</interval-sec>
-            <binding>
-            <command>property-adjust</command>
-            <property>controls/flight/rudder-trim</property>
-            <step>0.01</step>
-            <min>-1</min>
-            <max>1</max>
-            <wrap>0</wrap>
-            </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>Elevator.trim</object-name>
-        <action>
-            <button>0</button>
-            <repeatable>true</repeatable>
-            <interval-sec>0.1</interval-sec>
-            <binding>
-            <command>property-adjust</command>
-            <property>controls/flight/elevator-trim</property>
-            <step>-0.01</step>
-            <min>-1</min>
-            <max>1</max>
-            <wrap>0</wrap>
-            </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>Elevator.trim</object-name>
-        <action>
-            <button>1</button>
-            <repeatable>true</repeatable>
-            <interval-sec>0.1</interval-sec>
-            <binding>
-            <command>property-adjust</command>
-            <property>controls/flight/elevator-trim</property>
-            <step>0.01</step>
-            <min>-1</min>
-            <max>1</max>
-            <wrap>0</wrap>
-            </binding>
-        </action>
-    </animation>
-
-
-    <animation>
-        <type>pick</type>
         <object-name>Ebrake</object-name>
         <action>
             <button>0</button>
@@ -1317,35 +1604,5 @@
         </action>
     </animation>
 
-    <model>
-        <path>Aircraft/Generic/Effects/tyre-smoke-nose.xml</path>
-        <name>tyre-smoke-n</name>
-        <offsets>
-            <x-m>-3.97144</x-m>
-            <y-m>0</y-m>
-            <z-m>-1.43238</z-m>
-        </offsets>
-    </model>
-
-
-    <model>
-        <path>Aircraft/Generic/Effects/tyre-smoke-port.xml</path>
-        <name>tyre-smoke-p</name>
-        <offsets>
-            <x-m>-0.0935892</x-m>
-            <y-m>-1.243720</y-m>
-            <z-m>-1.2934</z-m>
-        </offsets>
-    </model>
-
-    <model>
-        <path>Aircraft/Generic/Effects/tyre-smoke-stbd.xml</path>
-        <name>tyre-smoke-s</name>
-        <offsets>
-            <x-m>-0.0935892</x-m>
-            <y-m>1.243720</y-m>
-            <z-m>-1.2934</z-m>
-        </offsets>
-    </model>
 
 </PropertyList>
