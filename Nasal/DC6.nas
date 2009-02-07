@@ -7,13 +7,14 @@ TireSpeed = {
     new : func(unit,diameter){
     m = { parents : [TireSpeed] };
             m.num=unit;
-            m.circumference = diameter*3.14;
+            m.circumference = diameter*math.pi;
             m.tire = props.globals.initNode("gear/gear["~m.num~"]/tire-rpm", 0.0, "DOUBLE");
             m.wow = props.globals.getNode("gear/gear["~m.num~"]/wow");
             m.geardown = props.globals.getNode("gear/gear["~m.num~"]/position-norm");
             m.rpm = 0;
         return m;
     },
+    #### calculate and write rpm ###########
     get_rotation: func (fdm1){
         var speed=0;
         if(me.geardown.getValue()==0){
