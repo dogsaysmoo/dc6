@@ -1,6 +1,8 @@
 var Vvolume = props.globals.getNode("sim/sound/view-volume",1);
 var FDM="";
  var counter=0;
+
+#tire rotation per minute by circumference/groundspeed#
 TireSpeed = {
     new : func(unit,diameter){
     m = { parents : [TireSpeed] };
@@ -8,12 +10,23 @@ TireSpeed = {
             m.circumference = diameter*3.14;
             m.tire = props.globals.initNode("gear/gear["~m.num~"]/tire-rpm", 0.0, "DOUBLE");
             m.wow = props.globals.getNode("gear/gear["~m.num~"]/wow");
-            m.gspeed = props.globals.getNode("velocities/groundspeed-kt");
+            m.geardown = props.globals.getNode("gear/gear["~m.num~"]/position-norm");
             m.rpm = 0;
         return m;
     },
-    get_rotation: func {
-        var speed =me.gspeed.getValue() * 30.8666667;
+    get_rotation: func (fdm1){
+        var speed=0;
+        if(me.geardown.getValue()==0){
+            me.rpm=0;
+            return;
+        }
+        if(fdm1=="yasim"){ 
+            speed =getprop("gear/gear["~me.num~"]/rollspeed-ms") or 0;
+            speed=speed*60;
+            }elsif(fdm1=="jsb"){
+                speed =getprop("fdm/jsbsim/gear/unit["~me.num~"]/wheel-speed-fps") or 0;
+                speed=speed*18.288;
+            }
         var wow = me.wow.getBoolValue();
         if(wow){
             me.rpm = speed / me.circumference;
@@ -23,6 +36,7 @@ TireSpeed = {
         me.tire.setValue(me.rpm);
     },
 };
+
 
 var tire=[];
 append(tire,TireSpeed.new(0,1.055));
@@ -117,7 +131,7 @@ setprop("controls/engines/engine[3]/fuel-pump",0);
 
 var update = func {
         updateBMEP();
-        tire[counter].get_rotation();
+        tire[counter].get_rotation(FDM);
         counter+=1;
         if(counter>2)counter=0;
     settimer(update,0);
