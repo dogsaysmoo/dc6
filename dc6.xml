@@ -19,10 +19,10 @@
   <solve-weight idx="1" weight="15000"/>
 </approach>
 <cruise speed="283" alt="20000" fuel="0.8">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.8"/>
-  <control-setting axis="/controls/engines/engine[1]/throttle" value="0.8"/>
-  <control-setting axis="/controls/engines/engine[2]/throttle" value="0.8"/>
-  <control-setting axis="/controls/engines/engine[3]/throttle" value="0.8"/>
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle" value="1"/>
+  <control-setting axis="/controls/engines/engine[2]/throttle" value="1"/>
+  <control-setting axis="/controls/engines/engine[3]/throttle" value="1"/>
   <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
   <control-setting axis="/controls/engines/engine[1]/mixture" value="1"/>
   <control-setting axis="/controls/engines/engine[2]/mixture" value="1"/>
@@ -49,10 +49,10 @@
           width="3" taper="0" midpoint="0"/>
 
 
-<wing x="-0.37" y="1.50" z="-0.5" length="11.58" camber="0.1"
-      chord="5.60" taper=".3" sweep="1" dihedral="6.5" idrag="1.5">
-  <stall aoa="10" width="4" peak="1.7"/>
-  <flap0 start="0.04" end="0.38" lift="1.8" drag="2.0"/>
+<wing x="-0.37" y="1.50" z="-0.5" length="11.58" camber="0.10"
+      chord="5.60" taper=".3" sweep="1" dihedral="6.5" idrag="1.0">
+  <stall aoa="14" width="6" peak="2"/>
+  <flap0 start="0.04" end="0.38" lift="1.5" drag="1.8"/>
   <flap1 start="0.38" end="0.97" lift="1.2" drag="1.2"/>
   <control-input axis="/controls/flight/flaps" control="FLAP0"/>
   <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
@@ -65,10 +65,10 @@
   <control-speed control="FLAP0" transition-time="5"/>
 </wing>
 
-<hstab x="-16.77" y="1.23" z="0.621" length="6.03" effectiveness="1.80"
+<hstab x="-16.77" y="1.23" z="0.621" length="6.03" effectiveness="2.0"
        chord="3.16" taper=".4" sweep="0" incidence="0">
-  <stall aoa="12" width="2" peak="1.5"/>
-  <flap0 start="0" end="1" lift="1.5" drag="1.1"/>
+  <stall aoa="15" width="3" peak="1.5"/>
+  <flap0 start="0" end="1" lift="1.6" drag="1.2"/>
   <control-input axis="/controls/flight/elevator" control="FLAP0"/>
   <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
   <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>

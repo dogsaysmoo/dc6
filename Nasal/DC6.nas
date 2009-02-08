@@ -45,7 +45,7 @@ append(tire,TireSpeed.new(1,1.151));
 append(tire,TireSpeed.new(2,1.151));
 
 setlistener("/sim/signals/fdm-initialized", func {
-    Vvolume.setDoubleValue(0.1);
+    Vvolume.setDoubleValue(-0.3);
     FDM=getprop("sim/flight-model");
     update();
 });
@@ -59,7 +59,7 @@ setlistener("/sim/current-view/internal", func(vw){
     if(vw.getBoolValue()){
     Vvolume.setDoubleValue(0.1);
     }else{
-    Vvolume.setDoubleValue(0.8);
+    Vvolume.setDoubleValue(1);
     }
 },1,0);
 
