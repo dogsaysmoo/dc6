@@ -193,72 +193,132 @@ Syd Adams
 
     <animation>
         <type>pick</type>
-        <object-name>crs.dn</object-name>
+        <object-name>crs.set</object-name>
         <action>
             <button>0</button>
             <repeatable>true</repeatable>
             <interval-sec>0.2</interval-sec>
             <binding>
-            <command>property-adjust</command>
-            <property>instrumentation/nav/radials/selected-deg</property>
-            <step>-1</step>
-            <min>0</min>
-            <max>359</max>
-            <wrap>1</wrap>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                </condition>
+                <command>property-adjust</command>
+                <property>instrumentation/nav/radials/selected-deg</property>
+                <step>1</step>
+                <min>0</min>
+                <max>359</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>instrumentation/nav/radials/selected-deg</property>
+                <step>5</step>
+                <min>0</min>
+                <max>359</max>
+                <wrap>1</wrap>
             </binding>
         </action>
     </animation>
 
     <animation>
         <type>pick</type>
-        <object-name>crs.dn</object-name>
+        <object-name>crs.set</object-name>
         <action>
             <button>1</button>
             <repeatable>true</repeatable>
             <interval-sec>0.2</interval-sec>
             <binding>
-            <command>property-adjust</command>
-            <property>instrumentation/nav/radials/selected-deg</property>
-            <step>-5</step>
-            <min>0</min>
-            <max>359</max>
-            <wrap>1</wrap>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                </condition>
+                <command>property-adjust</command>
+                <property>instrumentation/nav/radials/selected-deg</property>
+                <step>-1</step>
+                <min>0</min>
+                <max>359</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>instrumentation/nav/radials/selected-deg</property>
+                <step>-5</step>
+                <min>0</min>
+                <max>359</max>
+                <wrap>1</wrap>
             </binding>
         </action>
     </animation>
 
     <animation>
         <type>pick</type>
-        <object-name>crs.up</object-name>
+        <object-name>crs.set</object-name>
         <action>
-            <button>0</button>
-            <repeatable>true</repeatable>
-            <interval-sec>0.2</interval-sec>
+            <button>3</button>
             <binding>
-            <command>property-adjust</command>
-            <property>instrumentation/nav/radials/selected-deg</property>
-            <step>1</step>
-            <min>0</min>
-            <max>359</max>
-            <wrap>1</wrap>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                </condition>
+                <command>property-adjust</command>
+                <property>instrumentation/nav/radials/selected-deg</property>
+                <step>1</step>
+                <min>0</min>
+                <max>359</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>instrumentation/nav/radials/selected-deg</property>
+                <step>5</step>
+                <min>0</min>
+                <max>359</max>
+                <wrap>1</wrap>
             </binding>
         </action>
     </animation>
 
     <animation>
         <type>pick</type>
-        <object-name>crs.up</object-name>
+        <object-name>crs.set</object-name>
         <action>
-            <button>1</button>
-            <repeatable>true</repeatable>
-            <interval-sec>0.2</interval-sec>
+            <button>4</button>
             <binding>
-            <command>property-adjust</command>
-            <property>instrumentation/nav/radials/selected-deg</property>
-            <step>5</step>
-            <min>0</min>
-            <max>359</max>
-            <wrap>1</wrap>
+                <condition>
+                    <not>
+                        <property>devices/status/keyboard/shift</property>
+                    </not>
+                </condition>
+                <command>property-adjust</command>
+                <property>instrumentation/nav/radials/selected-deg</property>
+                <step>-1</step>
+                <min>0</min>
+                <max>359</max>
+                <wrap>1</wrap>
+            </binding>
+            <binding>
+                <condition>
+                    <property>devices/status/keyboard/shift</property>
+                </condition>
+                <command>property-adjust</command>
+                <property>instrumentation/nav/radials/selected-deg</property>
+                <step>-5</step>
+                <min>0</min>
+                <max>359</max>
+                <wrap>1</wrap>
             </binding>
         </action>
     </animation>

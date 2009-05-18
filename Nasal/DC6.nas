@@ -135,6 +135,8 @@ var update = func {
         tire[counter].get_rotation(FDM);
         counter+=1;
         if(counter>2)counter=0;
+        var agl=getprop("position/gear-agl-m") or 0;
+        setprop("sim/multiplay/generic/float[0]",agl);
     settimer(update,0);
 }
 
@@ -143,6 +145,7 @@ var updateBMEP = func {
     var rpm=0;
     var bmep=0;
     var torque=0;
+    
     for(var engine=0; engine< 4; engine+=1)
     {
         if(FDM=="jsb"){
