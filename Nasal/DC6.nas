@@ -1,6 +1,7 @@
 var Vvolume = props.globals.getNode("sim/sound/view-volume",1);
 var FDM="";
  var counter=0;
+aircraft.livery.init("Aircraft/dc6/Models/Liveries"); 
 
 #tire rotation per minute by circumference/groundspeed#
 TireSpeed = {
