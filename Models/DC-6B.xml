@@ -15,6 +15,70 @@
     </nasal>
 
     <animation>
+      <type>material</type>
+      <object-name>Fuselage</object-name>
+      <object-name>Nacelle1</object-name>
+      <object-name>Cflap1.1</object-name>
+      <object-name>Cflap1.2</object-name>
+      <object-name>Cflap1.3</object-name>
+      <object-name>Cflap1.4</object-name>
+      <object-name>Cflap1.5</object-name>
+      <object-name>Cflap1.6</object-name>
+      <object-name>Cflap1.7</object-name>
+      <object-name>Cflap1.8</object-name>
+
+      <object-name>Nacelle2</object-name>
+      <object-name>Cflap2.1</object-name>
+      <object-name>Cflap2.2</object-name>
+      <object-name>Cflap2.3</object-name>
+      <object-name>Cflap2.4</object-name>
+      <object-name>Cflap2.5</object-name>
+      <object-name>Cflap2.6</object-name>
+      <object-name>Cflap2.7</object-name>
+      <object-name>Cflap2.8</object-name>
+
+      <object-name>Nacelle3</object-name>
+      <object-name>Cflap3.1</object-name>
+      <object-name>Cflap3.2</object-name>
+      <object-name>Cflap3.3</object-name>
+      <object-name>Cflap3.4</object-name>
+      <object-name>Cflap3.5</object-name>
+      <object-name>Cflap3.6</object-name>
+      <object-name>Cflap3.7</object-name>
+      <object-name>Cflap3.8</object-name>
+
+      <object-name>Nacelle4</object-name>
+      <object-name>Cflap4.1</object-name>
+      <object-name>Cflap4.2</object-name>
+      <object-name>Cflap4.3</object-name>
+      <object-name>Cflap4.4</object-name>
+      <object-name>Cflap4.5</object-name>
+      <object-name>Cflap4.6</object-name>
+      <object-name>Cflap4.7</object-name>
+      <object-name>Cflap4.8</object-name>
+
+      <object-name>LHwing</object-name>
+      <object-name>LHaileron</object-name>
+      <object-name>LHflap</object-name>
+      <object-name>RHwing</object-name>
+      <object-name>RHaileron</object-name>
+      <object-name>RHflap</object-name>
+
+      <object-name>HStab</object-name>
+      <object-name>LHelevator</object-name>
+      <object-name>RHelevator</object-name>
+      <object-name>VStab</object-name>
+      <object-name>Rudder</object-name>
+
+      <object-name>RHfrt.grdoor</object-name>
+      <object-name>LHfrt.grdoor</object-name>
+
+      <property-base>sim/model/livery</property-base>
+      <texture-prop>texture</texture-prop>
+      <texture>paint1.png</texture>
+    </animation>
+
+    <animation>
         <type>shader</type>
         <shader>chrome</shader>
         <texture>Aircraft/dc6/Models/chrome1.png</texture>
@@ -88,7 +152,7 @@
         <type>select</type>
         <object-name>shadow</object-name>
         <condition>
-            <property>sim/rendering/shadows-ac</property>
+            <property>sim/rendering/shadows/enabled</property>
         </condition>
     </animation>
 
@@ -385,15 +449,13 @@
         </condition>
         <object-name>Rudder</object-name>
         <property>fdm/jsbsim/fcs/rudder-pos-deg</property>
-           <center>
-            <x-m>16.939</x-m>
-            <y-m>0</y-m>
-            <z-m>1.716</z-m>
-        </center>
         <axis>
-            <x>-0.051</x>
-            <y>0</y>
-            <z>-0.999</z>
+            <x1-m>17.141</x1-m>
+            <y1-m>0</y1-m>
+            <z1-m>5.565</z1-m>
+            <x2-m>16.970</x2-m>
+            <y2-m>0</y2-m>
+            <z2-m>1.716</z2-m>
         </axis>
     </animation>
 
@@ -405,17 +467,35 @@
                 <value>jsb</value>
             </equals>
         </condition>
-        <object-name>Elevator</object-name>
+        <object-name>RHelevator</object-name>
         <property>fdm/jsbsim/fcs/elevator-pos-deg</property>
-        <center>
-            <x-m>17.032</x-m>
-            <y-m>0.0</y-m>
-            <z-m>0.617</z-m>
-        </center>
         <axis>
-            <x>0.0</x>
-            <y>1.0</y>
-            <z>0.0</z>
+            <x1-m>17.032</x1-m>
+            <y1-m>1.218</y1-m>
+            <z1-m>0.617</z1-m>
+            <x2-m>17.175</x2-m>
+            <y2-m>6.777</y2-m>
+            <z2-m>0.617</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>jsb</value>
+            </equals>
+        </condition>
+        <object-name>LHelevator</object-name>
+        <property>fdm/jsbsim/fcs/elevator-pos-deg</property>
+        <axis>
+            <x1-m>17.175</x1-m>
+            <y1-m>-6.777</y1-m>
+            <z1-m>0.617</z1-m>
+            <x2-m>17.032</x2-m>
+            <y2-m>-1.218</y2-m>
+            <z2-m>0.617</z2-m>
         </axis>
     </animation>
 
@@ -519,15 +599,13 @@
         <object-name>Rudder</object-name>
         <property>surface-positions/rudder-pos-norm</property>
         <factor>15</factor>
-           <center>
-            <x-m>16.939</x-m>
-            <y-m>0</y-m>
-            <z-m>1.716</z-m>
-        </center>
         <axis>
-            <x>-0.051</x>
-            <y>0</y>
-            <z>-0.999</z>
+            <x1-m>17.141</x1-m>
+            <y1-m>0</y1-m>
+            <z1-m>5.565</z1-m>
+            <x2-m>16.970</x2-m>
+            <y2-m>0</y2-m>
+            <z2-m>1.716</z2-m>
         </axis>
     </animation>
 
@@ -539,18 +617,37 @@
                 <value>yasim</value>
             </equals>
         </condition>
-        <object-name>Elevator</object-name>
+        <object-name>RHelevator</object-name>
         <property>surface-positions/elevator-pos-norm</property>
         <factor>12</factor>
-        <center>
-            <x-m>17.032</x-m>
-            <y-m>0.0</y-m>
-            <z-m>0.617</z-m>
-        </center>
         <axis>
-            <x>0.0</x>
-            <y>1.0</y>
-            <z>0.0</z>
+            <x1-m>17.032</x1-m>
+            <y1-m>1.218</y1-m>
+            <z1-m>0.617</z1-m>
+            <x2-m>17.175</x2-m>
+            <y2-m>6.777</y2-m>
+            <z2-m>0.617</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <condition>
+            <equals>
+                <property>sim/flight-model</property>
+                <value>yasim</value>
+            </equals>
+        </condition>
+        <object-name>LHelevator</object-name>
+        <property>surface-positions/elevator-pos-norm</property>
+        <factor>12</factor>
+        <axis>
+            <x1-m>17.175</x1-m>
+            <y1-m>-6.777</y1-m>
+            <z1-m>0.617</z1-m>
+            <x2-m>17.032</x2-m>
+            <y2-m>-1.218</y2-m>
+            <z2-m>0.617</z2-m>
         </axis>
     </animation>
 
