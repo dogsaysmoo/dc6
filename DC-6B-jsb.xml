@@ -147,7 +147,7 @@ L.E.MAC 163.6 in (4.15544 m)
    <damping_coeff unit="LBS/FT/SEC">  9730.44 </damping_coeff>
    <max_steer unit="DEG">30.00 </max_steer>
    <brake_group>NONE</brake_group>
-   <retractable>RETRACT</retractable>
+   <retractable>1</retractable>
  </contact>
 
   <contact type="BOGEY" name="LEFT_MAIN">
@@ -163,7 +163,7 @@ L.E.MAC 163.6 in (4.15544 m)
    <damping_coeff unit="LBS/FT/SEC"> 19460.89 </damping_coeff>
    <max_steer unit="DEG">0</max_steer>
    <brake_group>LEFT</brake_group>
-   <retractable>RETRACT</retractable>
+   <retractable>1</retractable>
  </contact>
 
   <contact type="BOGEY" name="RIGHT_MAIN">
@@ -179,7 +179,7 @@ L.E.MAC 163.6 in (4.15544 m)
    <damping_coeff unit="LBS/FT/SEC"> 19460.89 </damping_coeff>
    <max_steer unit="DEG">0</max_steer>
    <brake_group>RIGHT</brake_group>
-   <retractable>RETRACT</retractable>
+   <retractable>1</retractable>
  </contact>
 
   <contact type="STRUCTURE" name="LEFT_WING">
