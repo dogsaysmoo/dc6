@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <sim>
+
+        <description>Douglas DC-6</description>
+        <author>Syd Adams.Ron Jensen</author>
+        <flight-model>yasim</flight-model>
+        <aero>dc6</aero>
+        <fuel-fraction>0.8</fuel-fraction>
+        <startup>
+            <splash-texture>Aircraft/dc6/splash.png</splash-texture>
+        </startup>
+
+        <sound>
+            <path>Aircraft/dc6/Sound/dc6-sound.xml</path>
+        </sound>
+
+        <model>
+            <path>Aircraft/dc6/Models/DC-6B.xml</path>
+            <livery>
+                <file type="string">PanAm</file>
+            </livery>
+
+            <autostart type="bool">0</autostart>
+        </model>
+
+        <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+    <airport>
+        <runways>
+            <start-offset-m>50</start-offset-m>
+        </runways>
+    </airport>
+
+	<systems>
+	    <autopilot>
+		<path>Aircraft/dc6/Systems/dc6-autopilot.xml</path>
+	    </autopilot>
+	</systems>
+	<!--instrumentation>
+		<dme>
+		    <name>dme</name>
+		    <number>0</number>
+		</dme>
+	</instrumentation-->
+
+        <view>
+            <internal archive="y">true</internal>
+            <config>
+                <!-- x/y/z == right/up/back -->
+                <x-offset-m archive="y">-0.57</x-offset-m>
+                <y-offset-m archive="y">1.39</y-offset-m>
+                <z-offset-m archive="y">-9.05</z-offset-m>
+                <pitch-offset-deg>-12</pitch-offset-deg>
+                <limits>
+                    <enabled type="bool">true</enabled>
+                    <left>
+                        <heading-max-deg type="double">140</heading-max-deg>
+                        <x-offset-max-m type="double">0.4</x-offset-max-m>
+                        <x-offset-threshold-deg type="double">45</x-offset-threshold-deg>
+                    </left>
+                    <right>
+                        <heading-max-deg type="double">160</heading-max-deg>
+                        <x-offset-max-m type="double">0.20</x-offset-max-m>
+                        <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                    </right>
+                </limits>
+            </config>
+        </view>
+
+  <view n="100">
+    <name>Engineer View</name>
+    <enabled type="bool">true</enabled>
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">45.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+      <dynamic-view type="bool">true</dynamic-view>
+		<x-offset-m archive="y">0</x-offset-m>
+                <y-offset-m archive="y">1.65</y-offset-m>
+                <z-offset-m archive="y">-9</z-offset-m>
+                <pitch-offset-deg>-50</pitch-offset-deg>
+      <limits>
+        <enabled type="bool">false</enabled>
+      </limits>
+    </config>
+  </view>
+
+        <chase-distance-m type="double" archive="y">-50.0</chase-distance-m>
+
+<multiplay>
+          <generic>
+			      <int n="2" alias="/controls/lighting/beacon-state/state"/>						<!-- Nav light - white becon -->
+			      <int n="3" alias="/controls/lighting/strobe-state/state"/>						<!-- Nav light - red becon -->
+			      <int n="4" alias="/controls/lighting/landing-lights"/>							<!-- Landing light -->
+			      <int n="5" alias="/controls/lighting/nav-lights"/>								<!-- Nav light - top, bottom, left, right, back -->
+
+            <float n="0">0</float>        <!-- for the shadow -->
+            <float n="1">0</float>        <!-- for the shadow -->
+            <float n="2">0</float>        <!-- for the shadow -->
+
+
+
+          </generic>
+        </multiplay>
+
+    <menubar>
+        <default>
+            <menu n="100">
+                <label>DC-6B</label>
+                <enabled type="bool">true</enabled>
+                <item>
+                    <label>Autostart</label>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>sim/model/autostart</property>
+                    </binding>
+                </item>
+		<item>
+		    <label>Electrical On</label>
+		    <binding>
+			<command>nasal</command>
+			<script>
+			setprop("controls/electric/battery-switch",1);
+			setprop("controls/lighting/instrument-lights",1);
+			setprop("controls/electric/engine[0]/generator",1);
+			setprop("controls/electric/engine[1]/generator",1);
+			setprop("controls/electric/engine[2]/generator",1);
+			setprop("controls/electric/engine[3]/generator",1);
+			</script>
+		    </binding>
+		</item>
+		<item>
+		    <label>Electrical Off</label>
+		    <binding>
+			<command>nasal</command>
+			<script>
+			setprop("controls/electric/battery-switch",0);
+			setprop("controls/lighting/instrument-lights",0);
+			setprop("controls/electric/engine[0]/generator",0);
+			setprop("controls/electric/engine[1]/generator",0);
+			setprop("controls/electric/engine[2]/generator",0);
+			setprop("controls/electric/engine[3]/generator",0);
+			</script>
+		    </binding>
+		</item>
+		<item>
+		    <label>Pushback</label>
+		    <name>pushback</name>
+	   	    <binding>
+			<command>dialog-show</command>
+			<dialog-name>pushback</dialog-name>
+		    </binding>
+		</item>
+                <item>
+                    <label>Select Livery</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>aircraft.livery.dialog.open()</script>
+                    </binding>
+                </item>
+            </menu>
+        </default>
+    </menubar>
+
+    <flaps>
+        <setting>0.0</setting>
+        <setting>0.2</setting>
+        <setting>0.4</setting>
+        <setting>0.6</setting>
+        <setting>0.8</setting>
+        <setting>1.0</setting>
+    </flaps>
+
+    <weight n="0">
+        <name>Crew</name>
+        <weight-lb>500</weight-lb>
+        <max-lb>800</max-lb>
+        <min-lb>400</min-lb>
+    </weight>
+
+    <weight n="1">
+        <name>Pax/Baggage</name>
+        <weight-lb>15000</weight-lb>
+        <max-lb>30000</max-lb>
+        <min-lb>0</min-lb>
+    </weight>
+
+    </sim>
+
+    <controls>
+        <gear>
+            <brake-parking>1</brake-parking>
+        </gear>
+        <engines>
+            <engine n="0">
+                <selected type="bool">1</selected>
+	        <reverse-thrust type="double">0.0</reverse-thrust>
+            </engine>
+            <engine n="1">
+                <selected type="bool">1</selected>
+	        <reverse-thrust type="double">0.0</reverse-thrust>
+            </engine>
+            <engine n="2">
+                <selected type="bool">1</selected>
+	        <reverse-thrust type="double">0.0</reverse-thrust>
+            </engine>
+            <engine n="3">
+                <selected type="bool">1</selected>
+	        <reverse-thrust type="double">0.0</reverse-thrust>
+            </engine>
+        </engines>
+	<lighting>
+	    <beacon type="bool">0</beacon>
+	</lighting>
+    </controls>
+ 
+    <consumables>
+        <fuel>
+            <tank n="0">
+                <name>#1 Main</name>
+                <selected type="bool">1</selected>
+            </tank>
+            <tank n="1">
+                <name>#2 Main</name>
+                <selected type="bool">1</selected>
+            </tank>
+            <tank n="2">
+                <name>#1 Alt</name>
+                <selected type="bool">1</selected>
+            </tank>
+            <tank n="3">
+                <name>#2 Alt</name>
+                <selected type="bool">1</selected>
+            </tank>
+            <tank n="4">
+                <name>#3 Alt</name>
+                <selected type="bool">1</selected>
+            </tank>
+            <tank n="5">
+                <name>#4 Alt</name>
+                <selected type="bool">1</selected>
+            </tank>
+            <tank n="6">
+                <name>#3 Main</name>
+                <selected type="bool">1</selected>
+            </tank>
+            <tank n="7">
+                <name>#4 Main</name>
+                <selected type="bool">1</selected>
+            </tank>
+        </fuel>
+    </consumables>
+
+    <autopilot>
+        <locks>
+            <passive-mode type="bool">true</passive-mode>
+        </locks>
+    </autopilot>
+
+    <input>
+        <keyboard>
+            <key n="267">
+                <name>F11</name>
+                <desc>Pop up autopilot dialog</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>dialogs.ap_settings.toggle()</script>
+                </binding>
+            </key>
+            <key n="268">
+                <name>F12</name>
+                <desc>Radio Stack</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>dialogs.Radio.toggle()</script>
+                </binding>
+            </key>
+	    <key n="127">
+         	<name>Delete</name>
+            	<desc>Toggle Reversers</desc>
+            	<binding>
+                    <command>nasal</command>
+                    <script>
+			dc6b.reverse_thrust(0);
+			dc6b.reverse_thrust(1);
+			dc6b.reverse_thrust(2);
+			dc6b.reverse_thrust(3);
+		    </script>
+		</binding>
+	    </key>
+	</keyboard>
+    </input>
+
+<nasal>
+    <dc6b>
+        <file>Aircraft/dc6/Nasal/DC6.nas</file>
+        <file>Aircraft/dc6/Nasal/Electrical.nas</file>
+        <!--file>Aircraft/dc6/Nasal/fuelsystem.nas</file-->
+	<file>Aircraft/Instruments-3d/ki266/ki266.nas</file>
+	<script><![CDATA[
+        ki266.new(0);
+	ki266.new(1);
+      ]]></script>
+    </dc6b>
+    <systems>
+        <file>Aircraft/dc6/Nasal/flightdirector.nas</file>
+	<file>Aircraft/dc6/Models/Instruments/Mod/KLN90B/kln90b.nas</file>
+    </systems>
+    <dialogs>
+	<file>Aircraft/dc6/Nasal/dialogs.nas</file>
+    </dialogs>
+    <controls>
+	<file>Aircraft/dc6/Nasal/controls.nas</file>
+    </controls>
+    <!--kr87>
+	<file></file>
+    </kr87-->
+</nasal>
+
+</PropertyList>
