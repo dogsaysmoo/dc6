@@ -193,8 +193,10 @@ var throttle_update = func(no) {
     }
     throt();
 }
+if (getprop("sim/flight-model") != "jsb") {
 throttle_update(0);
 throttle_update(1);
 throttle_update(2);
 throttle_update(3);
+}
 

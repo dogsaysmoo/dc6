@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-    <path>flightdeck.ac</path>
+    <path>flightdeck2.ac</path>
 
 <!-- Instruments -->
 <!-- Pilot Side -->
@@ -713,5 +713,274 @@
         </action>
     </animation>
 
+<!-- Throttles -->
+
+    <animation>
+	<type>rotate</type>
+	<object-name>thr1.L</object-name>
+	<object-name>thr1.R</object-name>
+	<condition>
+	    <not>
+		<property>controls/engines/engine/reverser</property>
+	    </not>
+	</condition>
+	<property>controls/engines/engine/throttle</property>
+	<factor>-40</factor>
+	<axis>
+	    <x1-m>-9.64</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.66</z1-m>
+	    <x2-m>-9.64</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.66</z2-m>
+	</axis>
+    </animation>
+    <animation>
+	<type>rotate</type>
+	<object-name>thr1.L</object-name>
+	<object-name>thr1.R</object-name>
+	<condition>
+		<property>controls/engines/engine/reverser</property>
+	</condition>
+	<property>controls/engines/engine/throttle</property>
+	<factor>15</factor>
+	<axis>
+	    <x1-m>-9.64</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.66</z1-m>
+	    <x2-m>-9.64</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.66</z2-m>
+	</axis>
+    </animation>
+
+    <animation>
+	<type>rotate</type>
+	<object-name>thr2.L</object-name>
+	<object-name>thr2.R</object-name>
+	<condition>
+	    <not>
+		<property>controls/engines/engine[1]/reverser</property>
+	    </not>
+	</condition>
+	<property>controls/engines/engine[1]/throttle</property>
+	<factor>-40</factor>
+	<axis>
+	    <x1-m>-9.64</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.66</z1-m>
+	    <x2-m>-9.64</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.66</z2-m>
+	</axis>
+    </animation>
+    <animation>
+	<type>rotate</type>
+	<object-name>thr2.L</object-name>
+	<object-name>thr2.R</object-name>
+	<condition>
+		<property>controls/engines/engine[1]/reverser</property>
+	</condition>
+	<property>controls/engines/engine[1]/throttle</property>
+	<factor>15</factor>
+	<axis>
+	    <x1-m>-9.64</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.66</z1-m>
+	    <x2-m>-9.64</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.66</z2-m>
+	</axis>
+    </animation>
+
+    <animation>
+	<type>rotate</type>
+	<object-name>thr3.L</object-name>
+	<object-name>thr3.R</object-name>
+	<condition>
+	    <not>
+		<property>controls/engines/engine[2]/reverser</property>
+	    </not>
+	</condition>
+	<property>controls/engines/engine[2]/throttle</property>
+	<factor>-40</factor>
+	<axis>
+	    <x1-m>-9.64</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.66</z1-m>
+	    <x2-m>-9.64</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.66</z2-m>
+	</axis>
+    </animation>
+    <animation>
+	<type>rotate</type>
+	<object-name>thr3.L</object-name>
+	<object-name>thr3.R</object-name>
+	<condition>
+		<property>controls/engines/engine[2]/reverser</property>
+	</condition>
+	<property>controls/engines/engine[2]/throttle</property>
+	<factor>15</factor>
+	<axis>
+	    <x1-m>-9.64</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.66</z1-m>
+	    <x2-m>-9.64</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.66</z2-m>
+	</axis>
+    </animation>
+
+    <animation>
+	<type>rotate</type>
+	<object-name>thr4.L</object-name>
+	<object-name>thr4.R</object-name>
+	<condition>
+	    <not>
+		<property>controls/engines/engine[3]/reverser</property>
+	    </not>
+	</condition>
+	<property>controls/engines/engine[3]/throttle</property>
+	<factor>-40</factor>
+	<axis>
+	    <x1-m>-9.64</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.66</z1-m>
+	    <x2-m>-9.64</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.66</z2-m>
+	</axis>
+    </animation>
+    <animation>
+	<type>rotate</type>
+	<object-name>thr4.L</object-name>
+	<object-name>thr4.R</object-name>
+	<condition>
+		<property>controls/engines/engine[3]/reverser</property>
+	</condition>
+	<property>controls/engines/engine[3]/throttle</property>
+	<factor>15</factor>
+	<axis>
+	    <x1-m>-9.64</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.66</z1-m>
+	    <x2-m>-9.64</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.66</z2-m>
+	</axis>
+    </animation>
+
+    <animation>
+	<type>rotate</type>
+	<object-name>rev_lock.lever</object-name>
+	<property>controls/engines/engine/reverser</property>
+	<factor>75</factor>
+	<axis>
+	    <x1-m>-9.65</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.68</z1-m>
+	    <x2-m>-9.65</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.68</z2-m>
+	</axis>
+    </animation>
+
+    <animation>
+	<type>pick</type>
+	<object-name>rev_lock.lever</object-name>
+	<action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+	    <binding>
+		<command>nasal</command>
+		<script>
+		dc6b.reverse_thrust(0);
+		dc6b.reverse_thrust(1);
+		dc6b.reverse_thrust(2);
+		dc6b.reverse_thrust(3);
+		</script>
+	    </binding>
+	</action>
+    </animation>
+
+<!-- Propeller Pitch -->
+
+    <animation>
+	<type>rotate</type>
+	<object-name>prop.cond</object-name>
+	<property>controls/engines/engine/propeller-pitch</property>
+	<factor>-40</factor>
+	<axis>
+	    <x1-m>-9.67</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.66</z1-m>
+	    <x2-m>-9.67</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.66</z2-m>
+	</axis>
+    </animation>
+
+<!-- Mixture -->
+
+    <animation>
+	<type>rotate</type>
+	<object-name>mix1</object-name>
+	<property>controls/engines/engine/mixture</property>
+	<factor>-23</factor>
+	<axis>
+	    <x1-m>-9.50</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.44</z1-m>
+	    <x2-m>-9.50</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.44</z2-m>
+	</axis>
+    </animation>
+	
+    <animation>
+	<type>rotate</type>
+	<object-name>mix2</object-name>
+	<property>controls/engines/engine[1]/mixture</property>
+	<factor>-23</factor>
+	<axis>
+	    <x1-m>-9.50</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.44</z1-m>
+	    <x2-m>-9.50</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.44</z2-m>
+	</axis>
+    </animation>
+	
+    <animation>
+	<type>rotate</type>
+	<object-name>mix3</object-name>
+	<property>controls/engines/engine[2]/mixture</property>
+	<factor>-23</factor>
+	<axis>
+	    <x1-m>-9.50</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.44</z1-m>
+	    <x2-m>-9.50</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.44</z2-m>
+	</axis>
+    </animation>
+	
+    <animation>
+	<type>rotate</type>
+	<object-name>mix4</object-name>
+	<property>controls/engines/engine[3]/mixture</property>
+	<factor>-23</factor>
+	<axis>
+	    <x1-m>-9.50</x1-m>
+	    <y1-m>-0.19</y1-m>
+	    <z1-m>0.44</z1-m>
+	    <x2-m>-9.50</x2-m>
+	    <y2-m>0.19</y2-m>
+	    <z2-m>0.44</z2-m>
+	</axis>
+    </animation>
 
 </PropertyList>
