@@ -4,7 +4,8 @@
 
     <sim>
 
-        <description>Douglas DC-6</description>
+        <description>Douglas DC-6B</description>
+        <variant-of>dc6</variant-of>
         <author>Syd Adams.Ron Jensen</author>
         <flight-model>jsb</flight-model>
         <aero>DC-6B-jsb</aero>
