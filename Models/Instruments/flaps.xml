@@ -18,7 +18,7 @@
     <animation>
         <type>rotate</type>
         <object-name>FLAP.needle</object-name>
-        <property>/surface-positions/flap-pos-norm</property>
+        <property>surface-positions/flap-pos-norm</property>
         <interpolation>
             <entry><ind>0.0</ind><dep>0.0</dep></entry>
             <entry><ind>0.2</ind><dep>27.50</dep></entry>

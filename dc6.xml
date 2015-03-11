@@ -213,8 +213,12 @@ dirty stall 81 kts @ MLW ( 88,000 lbs)
 <ballast x="-16.0" y="0.0" z="1" mass="-6500"/>
 <ballast x="0.0" y="0.0" z="-1.5" mass="15000"/>
 
-
 <weight x="9.0" y="0.0" z="0.0" mass-prop="/sim/weight[0]/weight-lb"/>
 <weight x="0.5" y="0.0" z="0.0" mass-prop="/sim/weight[1]/weight-lb"/>
+
+<thruster x="19.28"  y="0.00" z="-5.55" vx="1" vy="0" vz="0" thrust="20000">
+  <control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE"
+                 src0="-1" src1="1" dst0="-1" dst1="1"/>
+</thruster>
 
 </airplane>

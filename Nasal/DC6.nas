@@ -1,7 +1,8 @@
 var Vvolume = props.globals.getNode("sim/sound/view-volume",1);
 var FDM="";
- var counter=0;
+var counter=0;
 aircraft.livery.init("Aircraft/dc6/Models/Liveries"); 
+
 
 #tire rotation per minute by circumference/groundspeed#
 TireSpeed = {
@@ -136,8 +137,15 @@ var update = func {
         tire[counter].get_rotation(FDM);
         counter+=1;
         if(counter>2)counter=0;
-        var agl=getprop("position/gear-agl-m") or 0;
+
+        var agl=getprop("position/gear-agl-ft") or 0;
+        var pdeg=getprop("orientation/pitch-deg") or 0;
+        var rdeg=getprop("orientation/roll-deg") or 0;
+
         setprop("sim/multiplay/generic/float[0]",agl);
+        setprop("sim/multiplay/generic/float[1]",pdeg);
+        setprop("sim/multiplay/generic/float[2]",rdeg);
+
     settimer(update,0);
 }
 
@@ -159,4 +167,24 @@ var updateBMEP = func {
     }
         setprop("engines/engine["~engine~"]/bmep", bmep);
     }
+}
+
+
+#########################  new from Lake of Constance Hangar #########################
+var switch5SoundToggle = func{
+  var switchSound = props.globals.getNode("/sim/sound/switch5",1);
+  if(switchSound.getBoolValue()){
+    switchSound.setBoolValue(0);
+  }else{
+    switchSound.setBoolValue(1);
+  }
+}
+
+var switch6SoundToggle = func{
+  var switchSound = props.globals.getNode("/sim/sound/switch6",1);
+  if(switchSound.getBoolValue()){
+    switchSound.setBoolValue(0);
+  }else{
+    switchSound.setBoolValue(1);
+  }
 }
