@@ -45,6 +45,17 @@
           <path>Aircraft/dc6/Systems/dc6-instrumentation.xml</path>
         </instrumentation>
 
+	<systems>
+	    <autopilot>
+		<path>Aircraft/dc6/Systems/dc6-autopilot.xml</path>
+	    </autopilot>
+	</systems>
+	<!--instrumentation>
+		<dme>
+		    <name>dme</name>
+		    <number>0</number>
+		</dme>
+	</instrumentation-->
 
         <view>
             <internal archive="y">true</internal>
@@ -212,20 +223,27 @@
         <engines>
             <engine n="0">
                 <selected type="bool">1</selected>
+	        <reverse-thrust type="double">0.0</reverse-thrust>
             </engine>
             <engine n="1">
                 <selected type="bool">1</selected>
+	        <reverse-thrust type="double">0.0</reverse-thrust>
             </engine>
             <engine n="2">
                 <selected type="bool">1</selected>
+	        <reverse-thrust type="double">0.0</reverse-thrust>
             </engine>
             <engine n="3">
                 <selected type="bool">1</selected>
+	        <reverse-thrust type="double">0.0</reverse-thrust>
             </engine>
             <reverser_allow type="bool">0</reverser_allow>
         </engines>
+	<lighting>
+	    <beacon type="bool">0</beacon>
+	</lighting>
     </controls>
-
+ 
     <consumables>
         <fuel>
             <tank n="0">

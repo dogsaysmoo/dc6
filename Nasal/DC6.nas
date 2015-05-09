@@ -1,3 +1,5 @@
+#DC-6 Nasal Control Script
+
 var Vvolume = props.globals.getNode("sim/sound/view-volume",1);
 var FDM="";
 var counter=0;
@@ -83,6 +85,7 @@ setprop("controls/electric/battery-switch",1);
 setprop("controls/lighting/instrument-lights",1);
 setprop("controls/lighting/nav-lights",1);
 setprop("controls/lighting/beacon",1);
+setprop("controls/lighting/strobe",1);
 setprop("controls/engines/engine[0]/magnetos",3);
 setprop("controls/engines/engine[0]/fuel-pump",1);
 setprop("controls/engines/engine[0]/propeller-pitch",1);
@@ -122,6 +125,7 @@ setprop("controls/electric/battery-switch",0);
 setprop("controls/lighting/instrument-lights",0);
 setprop("controls/lighting/nav-lights",0);
 setprop("controls/lighting/beacon",0);
+setprop("controls/lighting/strobe",0);
 setprop("controls/engines/engine[0]/magnetos",0);
 setprop("controls/engines/engine[0]/fuel-pump",0);
 setprop("controls/engines/engine[1]/magnetos",0);

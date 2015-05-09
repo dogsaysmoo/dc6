@@ -104,7 +104,7 @@
             <z>-0.3</z>
         </position>
         <reference-dist>150.0</reference-dist>
-        <max-dist>500.0</max-dist>
+        <max-dist>1200.0</max-dist>
     </engine>
 
 <!-- Engine 2 -->
@@ -200,7 +200,7 @@
             <z>-0.68</z>
         </position>
         <reference-dist>50.0</reference-dist>
-        <max-dist>200.0</max-dist>
+        <max-dist>1200.0</max-dist>
     </engine>
 
 <!-- Engine 3 -->
@@ -296,7 +296,7 @@
             <z>-0.68</z>
         </position>
         <reference-dist>50.0</reference-dist>
-        <max-dist>200.0</max-dist>
+        <max-dist>1200.0</max-dist>
     </engine>
 
 <!-- Engine 4 -->
@@ -392,7 +392,7 @@
             <z>-0.3</z>
         </position>
         <reference-dist>50.0</reference-dist>
-        <max-dist>200.0</max-dist>
+        <max-dist>1200.0</max-dist>
     </engine>
 
     <rumble>

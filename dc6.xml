@@ -14,10 +14,10 @@ dirty stall 81 kts @ MLW ( 88,000 lbs)
 <airplane mass="55357">
 
 <approach speed="110" aoa="6" fuel="0.8">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.25"/>
-  <control-setting axis="/controls/engines/engine[1]/throttle" value="0.25"/>
-  <control-setting axis="/controls/engines/engine[2]/throttle" value="0.25"/>
-  <control-setting axis="/controls/engines/engine[3]/throttle" value="0.25"/>
+  <control-setting axis="/controls/engines/engine[0]/throttle-pos" value="0.25"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle-pos" value="0.25"/>
+  <control-setting axis="/controls/engines/engine[2]/throttle-pos" value="0.25"/>
+  <control-setting axis="/controls/engines/engine[3]/throttle-pos" value="0.25"/>
   <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
   <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
   <control-setting axis="/controls/engines/engine[2]/mixture" value="1.0"/>
@@ -32,10 +32,10 @@ dirty stall 81 kts @ MLW ( 88,000 lbs)
   <solve-weight idx="1" weight="15000"/>
 </approach>
 <cruise speed="283" alt="20000" fuel="0.8">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
-  <control-setting axis="/controls/engines/engine[1]/throttle" value="1"/>
-  <control-setting axis="/controls/engines/engine[2]/throttle" value="1"/>
-  <control-setting axis="/controls/engines/engine[3]/throttle" value="1"/>
+  <control-setting axis="/controls/engines/engine[0]/throttle-pos" value="1"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle-pos" value="1"/>
+  <control-setting axis="/controls/engines/engine[2]/throttle-pos" value="1"/>
+  <control-setting axis="/controls/engines/engine[3]/throttle-pos" value="1"/>
   <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
   <control-setting axis="/controls/engines/engine[1]/mixture" value="1"/>
   <control-setting axis="/controls/engines/engine[2]/mixture" value="1"/>
@@ -92,7 +92,7 @@ dirty stall 81 kts @ MLW ( 88,000 lbs)
 		  prop="/surface-positions/left-aileron-pos-norm"/>
   <control-output control="FLAP1" side="right"
 		  prop="/surface-positions/right-aileron-pos-norm"/>
-  <control-speed control="FLAP0" transition-time="5"/>
+  <control-speed control="FLAP0" transition-time="15"/>
 </wing>
 
 <hstab x="-16.77" y="1.23" z="0.621" length="6.03"
@@ -118,11 +118,11 @@ dirty stall 81 kts @ MLW ( 88,000 lbs)
   radius="1.98" cruise-power="2000" cruise-alt="20000"
    min-rpm="1400" max-rpm="2800" cruise-speed="290" cruise-rpm="2200"
    fine-stop="0.25" coarse-stop="4">
-    <piston-engine eng-rpm="2800" eng-power="2500"
-     displacement="2804" compression="6.75"
+    <piston-engine eng-rpm="2700" eng-power="2100"
+     displacement="2804.5" compression="6.75"
      turbo-mul="2.5" wastegate-mp="60" turbo-lag="0.2"/>
     <actionpt x="4.46" y="8.08" z="0.265"/>
-    <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
+    <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle-pos"/>
     <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
     <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
     <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/>
@@ -133,11 +133,11 @@ dirty stall 81 kts @ MLW ( 88,000 lbs)
   radius="1.98" cruise-power="2000" cruise-alt="20000"
    min-rpm="1400" max-rpm="2800" cruise-speed="290" cruise-rpm="2200"
    fine-stop="0.25" coarse-stop="4">
-    <piston-engine eng-rpm="2800" eng-power="2500"
-     displacement="2804" compression="6.75"
+    <piston-engine eng-rpm="2700" eng-power="2100"
+     displacement="2804.5" compression="6.75"
      turbo-mul="2.5" wastegate-mp="60" turbo-lag="0.2"/>
     <actionpt x="5.325" y="3.855" z="-0.08"/>
-    <control-input control="THROTTLE" axis="/controls/engines/engine[1]/throttle"/>
+    <control-input control="THROTTLE" axis="/controls/engines/engine[1]/throttle-pos"/>
     <control-input control="STARTER" axis="/controls/engines/engine[1]/starter"/>
     <control-input control="MAGNETOS" axis="/controls/engines/engine[1]/magnetos"/>
     <control-input control="MIXTURE" axis="/controls/engines/engine[1]/mixture"/>
@@ -148,11 +148,11 @@ dirty stall 81 kts @ MLW ( 88,000 lbs)
   radius="1.98" cruise-power="2000" cruise-alt="20000"
    min-rpm="1400" max-rpm="2800" cruise-speed="290" cruise-rpm="2200"
    fine-stop="0.25" coarse-stop="4">
-    <piston-engine eng-rpm="2800" eng-power="2500"
-     displacement="2804" compression="6.75"
+    <piston-engine eng-rpm="2700" eng-power="2100"
+     displacement="2804.5" compression="6.75"
      turbo-mul="2.5" wastegate-mp="60" turbo-lag="0.2"/>
     <actionpt x="5.325" y="-3.855" z="-0.08"/>
-    <control-input control="THROTTLE" axis="/controls/engines/engine[2]/throttle"/>
+    <control-input control="THROTTLE" axis="/controls/engines/engine[2]/throttle-pos"/>
     <control-input control="STARTER" axis="/controls/engines/engine[2]/starter"/>
     <control-input control="MAGNETOS" axis="/controls/engines/engine[2]/magnetos"/>
     <control-input control="MIXTURE" axis="/controls/engines/engine[2]/mixture"/>
@@ -163,16 +163,38 @@ dirty stall 81 kts @ MLW ( 88,000 lbs)
   radius="1.98" cruise-power="2000" cruise-alt="20000"
    min-rpm="1400" max-rpm="2800" cruise-speed="290" cruise-rpm="2200"
    fine-stop="0.25" coarse-stop="4">
-    <piston-engine eng-rpm="2800" eng-power="2500"
-     displacement="2804" compression="6.75"
+    <piston-engine eng-rpm="2700" eng-power="2100"
+     displacement="2804.5" compression="6.75"
      turbo-mul="2.5" wastegate-mp="60" turbo-lag="0.2"/>
     <actionpt x="4.46" y="-8.08" z="0.265"/>
-    <control-input control="THROTTLE" axis="/controls/engines/engine[3]/throttle"/>
+    <control-input control="THROTTLE" axis="/controls/engines/engine[3]/throttle-pos"/>
     <control-input control="STARTER" axis="/controls/engines/engine[3]/starter"/>
     <control-input control="MAGNETOS" axis="/controls/engines/engine[3]/magnetos"/>
     <control-input control="MIXTURE" axis="/controls/engines/engine[3]/mixture"/>
     <control-input control="ADVANCE" axis="/controls/engines/engine[3]/propeller-pitch"/>
 </propeller>
+
+    <thruster x="2.881" y="8.08" z="0.265" vx="-1" vy="0" vz="0" thrust="2100">
+        <control-input axis="controls/engines/engine[0]/reverse-thrust"
+        control="THROTTLE"/>
+    </thruster>
+    <thruster x="3.746" y="3.855" z="0.08" vx="-1" vy="0" vz="0" thrust="2100">
+        <control-input axis="controls/engines/engine[1]/reverse-thrust"
+        control="THROTTLE"/>
+    </thruster>
+    <thruster x="3.746" y="3.855" z="-0.08" vx="-1" vy="0" vz="0" thrust="2100">
+        <control-input axis="controls/engines/engine[2]/reverse-thrust"
+        control="THROTTLE"/>
+    </thruster>
+    <thruster x="2.881" y="-8.08" z="0.265" vx="-1" vy="0" vz="0" thrust="2100">
+        <control-input axis="controls/engines/engine[3]/reverse-thrust"
+        control="THROTTLE"/>
+    </thruster>
+
+<!-- Pushback -->
+<thruster x="9.383"  y="0.00" z="-3.083" vx="1" vy="0" vz="0" thrust="2000">
+ <control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
+</thruster>
 
 <gear x="9.383" y="0" z="-3.083" compression="0.3">
  <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
