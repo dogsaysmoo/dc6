@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-    <path>flightdeck2.ac</path>
+    <path>flightdeck.ac</path>
 
     <animation>
       <type>material</type>
@@ -1079,6 +1079,5 @@
         </action>
     </animation>
 
-<!-- Throttles -->
 
 </PropertyList>

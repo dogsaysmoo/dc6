@@ -104,12 +104,6 @@
     <model>
         <name>flightdeck</name>
         <path>Aircraft/dc6/Models/flightdeck.xml</path>
-	<condition>
-	    <equals>
-		<property>/sim/aero</property>
-		<value>DC-6B-jsb</value>
- 	    </equals>
-	</condition>
         <offsets>
             <x-m>0</x-m>
             <y-m>0</y-m>
@@ -185,7 +179,7 @@
                 <property>sim/rendering/rembrandt/enabled</property>
             </not>
         </condition>
-    </animation-->
+    </animation>
 
 <!--Engines-->
 <!-- ENG 1-->
