@@ -4,8 +4,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">Western</name>
-            <texture>Liveries/WAL.png</texture>
+            <name type="string">Pan American (N6527C)</name>
+            <texture>Liveries/PAA.png</texture>
         </livery>
     </model>
 </sim>
