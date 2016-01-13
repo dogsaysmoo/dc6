@@ -4,8 +4,8 @@
 -->
 <PropertyList>
     <params>
-        <power-btn>instrumentation/dme[0]/power-btn</power-btn>
-        <serviceable>instrumentation/dme[0]/serviceable</serviceable>
+        <power-btn>/instrumentation/dme[0]/power-btn</power-btn>
+        <serviceable>/instrumentation/dme[0]/serviceable</serviceable>
     </params>
 
     <path>dme.ac</path>
@@ -28,25 +28,44 @@
   <object-name>n1</object-name>
   <object-name>hld</object-name>
   <object-name>n2</object-name>
-  <object-name>SourceSelectorKnob</object-name>
   <emission>
    <red>0.4</red>
-   <green>0.08</green>
-   <blue>0.00004</blue>
-   <factor-prop>sim/model/material/instruments/factor</factor-prop>
+   <green>0.2</green>
+   <blue>0.1</blue>
+   <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
   </emission>
  </animation>
 
  <animation>
   <type>material</type>
-  <object-name>PowerSwitch.Lever</object-name>
-  <object-name>PowerSwitch.Base</object-name>
+  <object-name>SourceSelectorKnob</object-name>
+  <emission>
+   <red>0.3</red>
+   <green>0.3</green>
+   <blue>0.3</blue>
+   <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
   <object-name>Plane</object-name>
   <emission>
-   <red>0.1</red>
-   <green>0.02</green>
-   <blue>0.00001</blue>
-   <factor-prop>sim/model/material/instruments/factor</factor-prop>
+    <red>0.0256</red>
+    <green>0.0128</green>
+    <blue>0.0064</blue>
+    <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>PowerSwitch.Lever</object-name>1
+  <emission>
+   <red>0.4</red>
+   <green>0.2</green>
+   <blue>0.1</blue>
+   <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
   </emission>
  </animation>
 
@@ -80,6 +99,10 @@
             <property alias="../../../../params/power-btn"/>
             <value>1</value>
           </binding>
+          <binding>
+            <command>property-toggle</command>
+            <property>/sim/sound/switch2</property>
+          </binding>
         </action>
     </animation>
 
@@ -95,6 +118,10 @@
             <property alias="../../../../params/power-btn"/>
             <value>0</value>
           </binding>
+          <binding>
+            <command>property-toggle</command>
+            <property>/sim/sound/switch2</property>
+          </binding>
         </action>
     </animation>
 
@@ -109,6 +136,10 @@
             <command>property-toggle</command>
             <property alias="../../../../params/power-btn"/>
           </binding>
+          <binding>
+            <command>property-toggle</command>
+            <property>/sim/sound/switch2</property>
+          </binding>
         </action>
     </animation>
 
@@ -116,7 +147,7 @@
     <animation>
         <type>rotate</type>
         <object-name>SourceSelectorKnob</object-name>
-        <property>instrumentation/dme/switch-position</property>
+        <property>/instrumentation/dme/switch-position</property>
         <factor>-30</factor>
         <min-deg>-60</min-deg>
         <max-deg>0</max-deg>
@@ -136,6 +167,7 @@
     <animation>
         <type>pick</type>
         <object-name>SourceSelectorPick.R</object-name>
+        <object-name>SourceSelectorPick.L</object-name>
         <visible>false</visible>
         <action>
           <button>0</button>
@@ -151,13 +183,24 @@
           <binding>
               <condition>
                   <equals>
-                      <property>instrumentation/dme/switch-position</property>
+                      <property>/instrumentation/dme/switch-position</property>
                       <value type="int">1</value>
                   </equals>
               </condition>
               <command>property-assign</command>
-              <property>instrumentation/dme/frequencies/source</property>
-              <value>instrumentation/nav[0]/frequencies/selected-mhz</value>
+              <property>/instrumentation/dme/frequencies/source</property>
+              <value>/instrumentation/nav[0]/frequencies/selected-mhz</value>
+          </binding>
+          <binding>
+              <condition>
+                  <equals>
+                      <property>/instrumentation/dme/switch-position</property>
+                      <value type="int">2</value>
+                  </equals>
+              </condition>
+              <command>property-assign</command>
+              <property>/instrumentation/dme/frequencies/source</property>
+              <value>/instrumentation/dme/frequencies/selected-mhz</value>
           </binding>
           <binding>
               <condition>
@@ -167,19 +210,8 @@
                   </equals>
               </condition>
               <command>property-assign</command>
-              <property>instrumentation/dme/frequencies/source</property>
-              <value>instrumentation/dme/frequencies/selected-mhz</value>
-          </binding>
-          <binding>
-              <condition>
-                  <equals>
-                      <property>instrumentation/dme/switch-position</property>
-                      <value type="int">2</value>
-                  </equals>
-              </condition>
-              <command>property-assign</command>
-              <property>instrumentation/dme/frequencies/selected-mhz</property>
-              <property>instrumentation/nav[0]/frequencies/selected-mhz</property>
+              <property>/instrumentation/dme/frequencies/selected-mhz</property>
+              <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
           </binding>
           <binding>
               <condition>
@@ -189,22 +221,21 @@
                   </equals>
               </condition>
               <command>property-assign</command>
-              <property>instrumentation/dme/frequencies/source</property>
-              <value>instrumentation/nav[1]/frequencies/selected-mhz</value>
+              <property>/instrumentation/dme/frequencies/source</property>
+              <value>/instrumentation/nav[1]/frequencies/selected-mhz</value>
+          </binding>
+          <binding>
+            <command>property-toggle</command>
+            <property>/sim/sound/switch2</property>
           </binding>
         </action>
-    </animation>
 
-    <animation>
-        <type>pick</type>
-        <object-name>SourceSelectorPick.L</object-name>
-        <visible>false</visible>
         <action>
-          <button>0</button>
+          <button>1</button>
           <repeatable>false</repeatable>
           <binding>
               <command>property-adjust</command>
-              <property>instrumentation/dme/switch-position</property>
+              <property>/instrumentation/dme/switch-position</property>
               <step>-1</step>
               <min>1</min>
               <max>3</max>
@@ -213,37 +244,154 @@
           <binding>
               <condition>
                   <equals>
-                      <property>instrumentation/dme/switch-position</property>
+                      <property>/instrumentation/dme/switch-position</property>
                       <value type="int">1</value>
                   </equals>
               </condition>
               <command>property-assign</command>
-              <property>instrumentation/dme/frequencies/source</property>
-              <value>instrumentation/nav[0]/frequencies/selected-mhz</value>
+              <property>/instrumentation/dme/frequencies/source</property>
+              <value>/instrumentation/nav[0]/frequencies/selected-mhz</value>
           </binding>
           <binding>
               <condition>
                   <equals>
-                      <property>instrumentation/dme/switch-position</property>
+                      <property>/instrumentation/dme/switch-position</property>
                       <value type="int">2</value>
                   </equals>
               </condition>
               <command>property-assign</command>
-              <property>instrumentation/dme/frequencies/source</property>
-              <value>instrumentation/dme/frequencies/selected-mhz</value>
+              <property>/instrumentation/dme/frequencies/source</property>
+              <value>/instrumentation/dme/frequencies/selected-mhz</value>
           </binding>
           <binding>
               <condition>
                   <equals>
-                      <property>instrumentation/dme/switch-position</property>
+                      <property>/instrumentation/dme/switch-position</property>
                       <value type="int">2</value>
                   </equals>
               </condition>
               <command>property-assign</command>
-              <property>instrumentation/dme/frequencies/selected-mhz</property>
-              <property>instrumentation/nav[1]/frequencies/selected-mhz</property>
+              <property>/instrumentation/dme/frequencies/selected-mhz</property>
+              <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+          </binding>
+          <binding>
+            <command>property-toggle</command>
+            <property>/sim/sound/switch2</property>
+          </binding>
+        </action>
+
+        <action>
+          <button>3</button>
+          <repeatable>false</repeatable>
+          <binding>
+              <command>property-adjust</command>
+              <property>/instrumentation/dme/switch-position</property>
+              <step>-1</step>
+              <min>1</min>
+              <max>3</max>
+              <wrap>0</wrap>
+          </binding>
+          <binding>
+              <condition>
+                  <equals>
+                      <property>/instrumentation/dme/switch-position</property>
+                      <value type="int">1</value>
+                  </equals>
+              </condition>
+              <command>property-assign</command>
+              <property>/instrumentation/dme/frequencies/source</property>
+              <value>/instrumentation/nav[0]/frequencies/selected-mhz</value>
+          </binding>
+          <binding>
+              <condition>
+                  <equals>
+                      <property>/instrumentation/dme/switch-position</property>
+                      <value type="int">2</value>
+                  </equals>
+              </condition>
+              <command>property-assign</command>
+              <property>/instrumentation/dme/frequencies/source</property>
+              <value>/instrumentation/dme/frequencies/selected-mhz</value>
+          </binding>
+          <binding>
+              <condition>
+                  <equals>
+                      <property>/instrumentation/dme/switch-position</property>
+                      <value type="int">2</value>
+                  </equals>
+              </condition>
+              <command>property-assign</command>
+              <property>/instrumentation/dme/frequencies/selected-mhz</property>
+              <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+          </binding>
+          <binding>
+              <condition>
+                  <equals>
+                      <property>/instrumentation/dme/switch-position</property>
+                      <value type="int">3</value>
+                  </equals>
+              </condition>
+              <command>property-assign</command>
+              <property>/instrumentation/dme/frequencies/source</property>
+              <value>/instrumentation/nav[1]/frequencies/selected-mhz</value>
+          </binding>
+          <binding>
+            <command>property-toggle</command>
+            <property>/sim/sound/switch3</property>
+          </binding>
+        </action>
+
+        <action>
+          <button>4</button>
+          <repeatable>false</repeatable>
+          <binding>
+              <command>property-adjust</command>
+              <property>/instrumentation/dme/switch-position</property>
+              <step>1</step>
+              <min>1</min>
+              <max>3</max>
+              <wrap>0</wrap>
+          </binding>
+          <binding>
+              <condition>
+                  <equals>
+                      <property>/instrumentation/dme/switch-position</property>
+                      <value type="int">1</value>
+                  </equals>
+              </condition>
+              <command>property-assign</command>
+              <property>/instrumentation/dme/frequencies/source</property>
+              <value>/instrumentation/nav[0]/frequencies/selected-mhz</value>
+          </binding>
+          <binding>
+              <condition>
+                  <equals>
+                      <property>/instrumentation/dme/switch-position</property>
+                      <value type="int">2</value>
+                  </equals>
+              </condition>
+              <command>property-assign</command>
+              <property>/instrumentation/dme/frequencies/source</property>
+              <value>/instrumentation/dme/frequencies/selected-mhz</value>
+          </binding>
+          <binding>
+              <condition>
+                  <equals>
+                      <property>/instrumentation/dme/switch-position</property>
+                      <value type="int">2</value>
+                  </equals>
+              </condition>
+              <command>property-assign</command>
+              <property>/instrumentation/dme/frequencies/selected-mhz</property>
+              <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+          </binding>
+          <binding>
+            <command>property-toggle</command>
+            <property>/sim/sound/switch3</property>
           </binding>
         </action>
     </animation>
+
+   
 
 </PropertyList>
