@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <sim>
+        <description>Douglas DC-6B Copilot</description>
+        <author>Lake Of Constance Hangar</author>
+        <aircraft-version>1.0.7</aircraft-version>
+        <flight-model>null</flight-model>
+
+        <startup>
+            <splash-texture>Aircraft/dc6/splash.png</splash-texture>
+        </startup>
+
+        <sound>
+            <path>Aircraft/dc6/Sound/dc6-sound.xml</path>
+        </sound>
+
+        <model>
+          <path archive="y">Aircraft/dc6/Models/DC-6B-Copilot.xml</path>
+          <variant type="int"> 0 </variant>
+        </model>
+
+        <remote>
+         <pilot-callsign type="string"/>
+        </remote>
+
+        <help include="Help/dc6-help.xml"/>
+
+        <autopilot>
+          <settings>
+              <target-speed-kt type="double">220</target-speed-kt>
+              <target-pitch-deg type="double">0</target-pitch-deg>
+              <target-altitude-ft type="int">0</target-altitude-ft>
+              <heading-bug-deg type="int">0</heading-bug-deg>
+          </settings>
+          <switches>
+            <ap type="bool">0</ap>
+            <hdg type="bool">0</hdg>
+            <alt type="bool">0</alt>
+            <ias type="bool">0</ias>
+            <nav type="bool">0</nav>
+            <appr type="bool">0</appr>
+            <gps type="bool">0</gps>
+            <hdg type="bool">0</hdg>
+          </switches>    
+        </autopilot>
+
+        <instrumentation>
+          <path>Aircraft/dc6/Systems/dc6-instrumentation.xml</path>
+        </instrumentation>
+
+        <view n="0">
+          <name>Copilot Views</name>
+          <internal archive="y">true</internal>
+          <config>
+              <!-- x/y/z == right/up/back -->
+              <x-offset-m archive="y">0.57</x-offset-m>
+              <y-offset-m archive="y">1.39</y-offset-m>
+              <z-offset-m archive="y">-9.05</z-offset-m>
+              <pitch-offset-deg>-12</pitch-offset-deg>
+              <limits>
+                  <enabled type="bool">true</enabled>
+                  <left>
+                      <heading-max-deg type="double">160</heading-max-deg>
+                      <x-offset-max-m type="double">0.4</x-offset-max-m>
+                      <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                  </left>
+                  <right>
+                      <heading-max-deg type="double">140</heading-max-deg>
+                      <x-offset-max-m type="double">0.20</x-offset-max-m>
+                      <x-offset-threshold-deg type="double">45</x-offset-threshold-deg>
+                  </right>
+              </limits>
+          </config>
+        </view>
+
+        <multiplay>
+          <chat_display>1</chat_display>
+          <generic>
+            <!-- nothing possible -->
+          </generic>
+        </multiplay>
+
+        <menubar>
+            <default>
+                <menu n="100">
+                    <label>DC-6</label>
+                    <enabled type="bool">true</enabled>
+                    <item>
+                      <label>Select MP-Pilot</label>
+                      <binding>
+                        <command>nasal</command>
+                        <script>
+                          dual_control_tools.copilot_dialog.show(aircraft_dual_control.pilot_type);
+                        </script>
+                      </binding>
+                    </item>
+                </menu>
+            </default>
+          </menubar>
+
+    </sim>
+
+
+  <instrumentation include="Systems/dc6-init-instrumentation.xml"/>
+
+  <engines>
+    <engine n="0">
+      <running type="bool">false</running>
+      <bmep type="float">0.0</bmep>
+      <torque-ftlb type="float">0.0</torque-ftlb>
+    </engine>
+    <engine n="1">
+      <running type="bool">false</running>
+      <bmep type="float">0.0</bmep>
+      <torque-ftlb type="float">0.0</torque-ftlb>
+    </engine>
+    <engine n="2">
+      <running type="bool">false</running>
+      <bmep type="float">0.0</bmep>
+      <torque-ftlb type="float">0.0</torque-ftlb>
+    </engine>
+    <engine n="3">
+      <running type="bool">false</running>
+      <bmep type="float">0.0</bmep>
+      <torque-ftlb type="float">0.0</torque-ftlb>
+    </engine>
+  </engines>
+
+  <fdm>
+    <jsbsim>
+      <propulsion>
+        <engine n="0">
+          <power-hp>0</power-hp>
+        </engine>
+      </propulsion>
+    </jsbsim>
+  </fdm>
+
+  <!-- not nil for AGL-Radar -->
+  <position>
+    <gear-agl-ft type="float">0.0</gear-agl-ft>
+    <gear-agl-m type="float">0.0</gear-agl-m>
+  </position>
+
+  <nasal>
+    <dc6b>
+        <file>Aircraft/dc6/Nasal/DC6.nas</file>
+        <file>Aircraft/dc6/Nasal/Electrical.nas</file>  
+        <file>Aircraft/dc6/Nasal/mk-ki266.nas</file>
+        <script><![CDATA[
+          ki266.new(0);
+        ]]></script>
+        <!--<file>Aircraft/dc6/Nasal/mk-agl-radar.nas</file>-->
+        <file>Aircraft/dc6/Nasal/mk-ap-helper.nas</file>
+        <file>Aircraft/dc6/Nasal/mk-swap-nav.nas</file>
+        <file>Aircraft/dc6/Nasal/mk-rmi-adf-nav.nas</file>
+        <file>Aircraft/dc6/Nasal/mk-frw.nas</file>
+    </dc6b>
+    <frw>
+      <file>Aircraft/dc6/Nasal/mk-frw.nas</file>
+    </frw>
+    <dual_control_tools>
+      <file>Aircraft/dc6/Nasal/Gidenstam/dual-control-tools.nas</file>
+    </dual_control_tools>
+    <aircraft_dual_control>
+      <file>Aircraft/dc6/Nasal/dc6-dual-control.nas</file>
+    </aircraft_dual_control>
+    <dual_control>
+      <file>Aircraft/dc6/Nasal/Gidenstam/copilot-dual-control.nas</file>
+    </dual_control>
+  </nasal>
+
+</PropertyList>
+

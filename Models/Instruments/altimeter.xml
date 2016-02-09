@@ -10,6 +10,7 @@
         <object-name>ALT100</object-name>
         <object-name>ALT1000</object-name>
         <object-name>ALT10000</object-name>
+        <object-name>ALT.FacePressure</object-name>
         <emission>
             <red>0.8</red>
             <green>0.4</green>
@@ -67,6 +68,22 @@
             <y-m>0</y-m>
             <z-m>0</z-m>
         </center>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>ALT.FacePressure</object-name>
+      <property>/instrumentation/altimeter/setting-inhg</property>
+      <interpolation>
+        <entry><ind>  28</ind><dep>-200</dep></entry>
+        <entry><ind>  30</ind><dep>   0</dep></entry>
+        <entry><ind>31.3</ind><dep> 130</dep></entry>
+      </interpolation>
+      <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
     </animation>
 
 <!-- Hotspots -->

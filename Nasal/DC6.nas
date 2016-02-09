@@ -1,9 +1,8 @@
-#DC-6 Nasal Control Script
-
 var Vvolume = props.globals.getNode("sim/sound/view-volume",1);
 var FDM="";
- var counter=0;
+var counter=0;
 aircraft.livery.init("Aircraft/dc6/Models/Liveries"); 
+
 
 #tire rotation per minute by circumference/groundspeed#
 TireSpeed = {
@@ -84,7 +83,6 @@ setprop("controls/electric/battery-switch",1);
 setprop("controls/lighting/instrument-lights",1);
 setprop("controls/lighting/nav-lights",1);
 setprop("controls/lighting/beacon",1);
-setprop("controls/lighting/strobe",1);
 setprop("controls/engines/engine[0]/magnetos",3);
 setprop("controls/engines/engine[0]/fuel-pump",1);
 setprop("controls/engines/engine[0]/propeller-pitch",1);
@@ -124,7 +122,6 @@ setprop("controls/electric/battery-switch",0);
 setprop("controls/lighting/instrument-lights",0);
 setprop("controls/lighting/nav-lights",0);
 setprop("controls/lighting/beacon",0);
-setprop("controls/lighting/strobe",0);
 setprop("controls/engines/engine[0]/magnetos",0);
 setprop("controls/engines/engine[0]/fuel-pump",0);
 setprop("controls/engines/engine[1]/magnetos",0);
@@ -140,8 +137,15 @@ var update = func {
         tire[counter].get_rotation(FDM);
         counter+=1;
         if(counter>2)counter=0;
-        var agl=getprop("position/gear-agl-m") or 0;
+
+        var agl=getprop("position/gear-agl-ft") or 0;
+        var pdeg=getprop("orientation/pitch-deg") or 0;
+        var rdeg=getprop("orientation/roll-deg") or 0;
+
         setprop("sim/multiplay/generic/float[0]",agl);
+        setprop("sim/multiplay/generic/float[1]",pdeg);
+        setprop("sim/multiplay/generic/float[2]",rdeg);
+
     settimer(update,0);
 }
 
@@ -165,38 +169,22 @@ var updateBMEP = func {
     }
 }
 
-# Reverse Thrust
 
-var reverse_thrust = func(no) {
-	if (getprop("controls/engines/engine[" ~ no ~ "]/reverser")) {
-		setprop("controls/engines/engine[" ~ no ~ "]/reverser",0);
-	} else {
-		setprop("controls/engines/engine[" ~ no ~ "]/reverser",1);
-	}	
-	setprop("controls/engines/engine[" ~ no ~ "]/throttle",0.0);
+#########################  new from Lake of Constance Hangar #########################
+var switch5SoundToggle = func{
+  var switchSound = props.globals.getNode("/sim/sound/switch5",1);
+  if(switchSound.getBoolValue()){
+    switchSound.setBoolValue(0);
+  }else{
+    switchSound.setBoolValue(1);
+  }
 }
 
-var throttle_update = func(no) {
-    reverser = props.globals.getNode("controls/engines/engine[" ~ no ~ "]/reverser");
-    rev_thrust = props.globals.getNode("controls/engines/engine[" ~ no ~ "]/reverse-thrust");
-    throttle_in = props.globals.getNode("controls/engines/engine[" ~ no ~ "]/throttle");
-    throttle_out = props.globals.initNode("controls/engines/engine[" ~ no ~ "]/throttle-pos", 0.0, "DOUBLE");
-    var throt = func {	
-	if (reverser.getBoolValue()) {
-		rev_thrust.setValue(throttle_in.getValue());
-		throttle_out.setValue(0.15 * throttle_in.getValue());
-	} else {
-		rev_thrust.setValue(0);
-		throttle_out.setValue(throttle_in.getValue());
-	}
-	settimer(throt,0);
-    }
-    throt();
+var switch6SoundToggle = func{
+  var switchSound = props.globals.getNode("/sim/sound/switch6",1);
+  if(switchSound.getBoolValue()){
+    switchSound.setBoolValue(0);
+  }else{
+    switchSound.setBoolValue(1);
+  }
 }
-if (getprop("sim/flight-model") != "jsb") {
-throttle_update(0);
-throttle_update(1);
-throttle_update(2);
-throttle_update(3);
-}
-

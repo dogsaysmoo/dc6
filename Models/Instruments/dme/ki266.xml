@@ -22,16 +22,15 @@
 -->
 <PropertyList>
   <params>
-    <in-range>instrumentation/dme[0]/in-range</in-range>
-    <right-display>instrumentation/dme[0]/min-kts-display</right-display>
-    <left-display>instrumentation/dme[0]/miles-display</left-display>
-    <left-display-dot>instrumentation/dme[0]/left-dot</left-display-dot>
-    <power-btn>instrumentation/dme[0]/power-btn</power-btn>
-    <serviceable>instrumentation/dme[0]/serviceable</serviceable>
-    <dimming>instrumentation/dme[0]/dimming-norm</dimming>
-
-    <min-kts>instrumentation/dme[0]/switch-min-kts</min-kts>
-    <electrical>systems/electrical/outputs/dme</electrical>
+    <in-range>/instrumentation/dme[0]/in-range</in-range>
+    <right-display>/instrumentation/dme[0]/min-kts-display</right-display>
+    <left-display>/instrumentation/dme[0]/miles-display</left-display>
+    <left-display-dot>/instrumentation/dme[0]/left-dot</left-display-dot>
+    <power-btn>/instrumentation/dme[0]/power-btn</power-btn>
+    <serviceable>/instrumentation/dme[0]/serviceable</serviceable>
+    <dimming>/instrumentation/dme[0]/dimming-norm</dimming>
+    <min-kts>/instrumentation/dme[0]/switch-min-kts</min-kts>
+    <electrical>/systems/electrical/outputs/dme</electrical>
   </params>
 
   <path>ki266.ac</path>
@@ -53,10 +52,10 @@
     <type>material</type>
     <object-name>ModeSwitch</object-name>
     <emission>
-      <red>0.2</red>
-      <green>0.04</green>
-      <blue>0</blue>
-      <factor-prop>sim/model/material/instruments/factor</factor-prop>
+        <red>0.8</red>
+        <green>0.5</green>
+        <blue>0.3</blue>
+        <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
     </emission>
   </animation>
 
@@ -67,7 +66,7 @@
       <red>0.1</red>
       <green>0.02</green>
       <blue>0.00001</blue>
-      <factor-prop>sim/model/material/instruments/factor</factor-prop>
+      <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
     </emission>
   </animation>
 
@@ -126,6 +125,10 @@
       <binding>
         <command>property-toggle</command>
         <property alias="../../../../params/min-kts"/>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/sound/switch2</property>
       </binding>
     </action>
   </animation>

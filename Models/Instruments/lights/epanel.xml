@@ -190,7 +190,8 @@
   <animation>
       <type>rotate</type>
       <object-name>switch.003</object-name>
-      <property>/controls/lighting/landing-lights</property>
+      <!-- <property>/controls/lighting/landing-lights</property> -->
+      <property>sim/multiplay/generic/int[4]</property>  
       <interpolation> 
               <entry>
                   <ind>0</ind>
@@ -254,7 +255,7 @@
       </center>
   </animation>
 
-  <!--animation>
+  <animation>
       <type>pick</type>
       <object-name>KnobPanelLight</object-name>
       <object-name>nightHelp</object-name>
@@ -413,7 +414,7 @@
             <property>/sim/sound/switch</property>
           </binding>
       </action>
-  </animation-->
+  </animation>
 
 
 </PropertyList>
